@@ -21,6 +21,9 @@
 		2EBB52422B5D96A9005616F3 /* StandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB52412B5D96A9005616F3 /* StandingViewController.swift */; };
 		2EBB52442B5D96B3005616F3 /* CircuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB52432B5D96B3005616F3 /* CircuitViewController.swift */; };
 		2EBB52462B5D96BF005616F3 /* VisualizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB52452B5D96BF005616F3 /* VisualizeViewController.swift */; };
+		2EBB52492B5DAF41005616F3 /* RaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB52482B5DAF41005616F3 /* RaceModel.swift */; };
+		2EBB524B2B5DAF5B005616F3 /* RaceTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB524A2B5DAF5B005616F3 /* RaceTableModel.swift */; };
+		2EBB524D2B5DAF6D005616F3 /* CircuitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB524C2B5DAF6D005616F3 /* CircuitModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		2EBB52412B5D96A9005616F3 /* StandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingViewController.swift; sourceTree = "<group>"; };
 		2EBB52432B5D96B3005616F3 /* CircuitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitViewController.swift; sourceTree = "<group>"; };
 		2EBB52452B5D96BF005616F3 /* VisualizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizeViewController.swift; sourceTree = "<group>"; };
+		2EBB52482B5DAF41005616F3 /* RaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceModel.swift; sourceTree = "<group>"; };
+		2EBB524A2B5DAF5B005616F3 /* RaceTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceTableModel.swift; sourceTree = "<group>"; };
+		2EBB524C2B5DAF6D005616F3 /* CircuitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,7 @@
 		2EBB52112B5D92D3005616F3 /* Racing Line */ = {
 			isa = PBXGroup;
 			children = (
+				2EBB52472B5DAF1D005616F3 /* Models */,
 				2EBB52262B5D9318005616F3 /* App */,
 				2EBB52282B5D9335005616F3 /* NetworkManager */,
 				2EBB52272B5D9325005616F3 /* Resources */,
@@ -179,6 +186,16 @@
 			path = Visualize;
 			sourceTree = "<group>";
 		};
+		2EBB52472B5DAF1D005616F3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2EBB52482B5DAF41005616F3 /* RaceModel.swift */,
+				2EBB524A2B5DAF5B005616F3 /* RaceTableModel.swift */,
+				2EBB524C2B5DAF6D005616F3 /* CircuitModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,6 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EBB52492B5DAF41005616F3 /* RaceModel.swift in Sources */,
+				2EBB524D2B5DAF6D005616F3 /* CircuitModel.swift in Sources */,
 				2EBB523C2B5D967D005616F3 /* TabBarViewController.swift in Sources */,
 				2EBB52302B5D93DD005616F3 /* NetworkService.swift in Sources */,
 				2EBB52402B5D96A1005616F3 /* RacingViewController.swift in Sources */,
@@ -257,6 +276,7 @@
 				2EBB522E2B5D93C1005616F3 /* NetworkError.swift in Sources */,
 				2EBB52322B5D9402005616F3 /* ColorExtension.swift in Sources */,
 				2EBB523E2B5D9698005616F3 /* HomeViewController.swift in Sources */,
+				2EBB524B2B5DAF5B005616F3 /* RaceTableModel.swift in Sources */,
 				2EBB52342B5D943B005616F3 /* UIViewPin.swift in Sources */,
 				2EBB52152B5D92D3005616F3 /* SceneDelegate.swift in Sources */,
 				2EBB522C2B5D93A1005616F3 /* Network.swift in Sources */,
