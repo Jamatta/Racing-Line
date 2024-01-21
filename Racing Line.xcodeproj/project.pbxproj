@@ -24,6 +24,8 @@
 		2EBB52492B5DAF41005616F3 /* RaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB52482B5DAF41005616F3 /* RaceModel.swift */; };
 		2EBB524B2B5DAF5B005616F3 /* RaceTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB524A2B5DAF5B005616F3 /* RaceTableModel.swift */; };
 		2EBB524D2B5DAF6D005616F3 /* CircuitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB524C2B5DAF6D005616F3 /* CircuitModel.swift */; };
+		2EBB52512B5DB0CA005616F3 /* RacingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB52502B5DB0CA005616F3 /* RacingViewModel.swift */; };
+		2EBB52542B5DB1A1005616F3 /* RacingTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB52532B5DB1A1005616F3 /* RacingTableCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		2EBB52482B5DAF41005616F3 /* RaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceModel.swift; sourceTree = "<group>"; };
 		2EBB524A2B5DAF5B005616F3 /* RaceTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceTableModel.swift; sourceTree = "<group>"; };
 		2EBB524C2B5DAF6D005616F3 /* CircuitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitModel.swift; sourceTree = "<group>"; };
+		2EBB52502B5DB0CA005616F3 /* RacingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacingViewModel.swift; sourceTree = "<group>"; };
+		2EBB52532B5DB1A1005616F3 /* RacingTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacingTableCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 		2EBB52112B5D92D3005616F3 /* Racing Line */ = {
 			isa = PBXGroup;
 			children = (
+				2EBB52522B5DB17B005616F3 /* Components */,
 				2EBB52472B5DAF1D005616F3 /* Models */,
 				2EBB52262B5D9318005616F3 /* App */,
 				2EBB52282B5D9335005616F3 /* NetworkManager */,
@@ -208,8 +213,17 @@
 		2EBB524F2B5DB014005616F3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2EBB52502B5DB0CA005616F3 /* RacingViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2EBB52522B5DB17B005616F3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2EBB52532B5DB1A1005616F3 /* RacingTableCellView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EBB52512B5DB0CA005616F3 /* RacingViewModel.swift in Sources */,
 				2EBB52492B5DAF41005616F3 /* RaceModel.swift in Sources */,
 				2EBB524D2B5DAF6D005616F3 /* CircuitModel.swift in Sources */,
 				2EBB523C2B5D967D005616F3 /* TabBarViewController.swift in Sources */,
@@ -293,6 +308,7 @@
 				2EBB52322B5D9402005616F3 /* ColorExtension.swift in Sources */,
 				2EBB523E2B5D9698005616F3 /* HomeViewController.swift in Sources */,
 				2EBB524B2B5DAF5B005616F3 /* RaceTableModel.swift in Sources */,
+				2EBB52542B5DB1A1005616F3 /* RacingTableCellView.swift in Sources */,
 				2EBB52342B5D943B005616F3 /* UIViewPin.swift in Sources */,
 				2EBB52152B5D92D3005616F3 /* SceneDelegate.swift in Sources */,
 				2EBB522C2B5D93A1005616F3 /* Network.swift in Sources */,

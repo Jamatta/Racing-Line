@@ -39,7 +39,7 @@ class TabBarViewController: UITabBarController {
     
     private func customizeTabBarAppearance() {
            // Customize the appearance of the entire tab bar
-        UITabBar.appearance().barTintColor = UIColor(AppColors.accentColor) // Set your custom color
+        UITabBar.appearance().barTintColor = UIColor(AppColors.background) // Set your custom color
            UITabBar.appearance().tintColor = UIColor(AppColors.accentColor) // Set the color of selected items
            UITabBar.appearance().unselectedItemTintColor = UIColor(AppColors.textSecondary) // Set the color of unselected items
        }
