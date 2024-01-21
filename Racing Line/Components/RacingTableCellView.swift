@@ -53,11 +53,11 @@ struct RacingTableCellView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
         .frame(maxWidth: .infinity)
-        .frame(minWidth: 160)
+        .frame(minWidth: 148)
     }
     
     private var circuitImageView: some View {
-        Image(race.circuit.location.country)
+        Image(race.circuit.circuitID)
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: 60, height: 48)
