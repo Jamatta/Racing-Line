@@ -157,7 +157,8 @@
 		2EBB52372B5D957D005616F3 /* Racing */ = {
 			isa = PBXGroup;
 			children = (
-				2EBB523F2B5D96A1005616F3 /* RacingViewController.swift */,
+				2EBB524E2B5DB006005616F3 /* View */,
+				2EBB524F2B5DB014005616F3 /* ViewModel */,
 			);
 			path = Racing;
 			sourceTree = "<group>";
@@ -194,6 +195,21 @@
 				2EBB524C2B5DAF6D005616F3 /* CircuitModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2EBB524E2B5DB006005616F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2EBB523F2B5D96A1005616F3 /* RacingViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2EBB524F2B5DB014005616F3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
