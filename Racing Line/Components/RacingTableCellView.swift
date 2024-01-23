@@ -14,49 +14,20 @@ struct RacingTableCellView: View {
     
     //MARK: - Body
     var body: some View {
-        HStack(spacing: 20) {
-            dateInfoView
-            
-            HStack(spacing: 20) {
-                VStack(alignment: .leading, spacing: 8) {
-                    HStack {
-                        Text(race.circuit.location.country)
-                            .bold()
-                            .foregroundStyle(AppColors.textPrimary)
-                        Spacer()
-                        Text("ROUND \(race.round)")
-                            .font(.caption)
-                            .foregroundStyle(AppColors.accentColor)
-                    }
-                    
-                    Text(race.circuit.circuitName)
-                        .foregroundStyle(AppColors.textSecondary)
-                        .font(.caption)
-                }
-                
-                Image(race.circuit.location.country)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 60, height: 48)
-                    .cornerRadius(4)
-            }
-        }
-        .padding(.horizontal, 12)
-        .padding(.vertical, 12)
-        .background(AppColors.layer)
+        cellContainerView
     }
-    
+    //MARK: - Components
     private var dateInfoView: some View {
-        VStack(alignment: .center, spacing: 4) {
-            dateView
+        VStack(alignment: .center, spacing: 6) {
+            roundView
             monthView
         }
     }
     
-    private var dateView: some View {
-        Text(race.date)
-            .foregroundStyle(AppColors.textSecondary)
+    private var roundView: some View {
+        Text("ROUND \(race.round)")
             .font(.caption)
+            .foregroundStyle(AppColors.accentColor)
     }
     
     private var monthView: some View {
@@ -67,5 +38,46 @@ struct RacingTableCellView: View {
             .padding(.vertical, 4)
             .background(AppColors.gray)
             .cornerRadius(6)
+    }
+    
+    private var circuitMainInfoView: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(race.circuit.location.country)
+                .foregroundStyle(AppColors.textPrimary)
+                .bold()
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+            Text(race.circuit.circuitName)
+                .foregroundStyle(AppColors.textSecondary)
+                .font(.caption)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .frame(maxWidth: .infinity)
+        .frame(minWidth: 148)
+    }
+    
+    private var circuitImageView: some View {
+        Image(race.circuit.circuitID)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 60, height: 48)
+            .cornerRadius(4)
+    }
+    
+    private var contentView: some View {
+        HStack(spacing: 12) {
+            circuitMainInfoView
+            Spacer()
+            circuitImageView
+        }
+    }
+    
+    private var cellContainerView: some View {
+        HStack(spacing: 20) {
+            dateInfoView
+            contentView
+        }
+        .padding(.horizontal, 12)
+        .frame(maxWidth: .infinity)
     }
 }
