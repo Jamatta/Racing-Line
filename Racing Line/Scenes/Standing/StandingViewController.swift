@@ -6,24 +6,33 @@
 //
 
 import UIKit
+import SwiftUI
 
-class StandingViewController: UIViewController {
+final class StandingViewController: UIViewController, UITableViewDelegate {
 
+    private var viewModel: StandingViewModel = StandingViewModel(networkManager: Network())
+    private var driverStandings = [DriverStanding]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewModelDelegate()
+        viewModel.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupViewModelDelegate() {
+        viewModel.delegate = self
     }
-    */
+}
 
+extension StandingViewController: StandingViewModelDelegate {
+    func standingInfoGot(_ data: StandingResponse) {
+        let drivers = data.mrData.standingsTable?.standingsLists.first?.driverStandings
+        driverStandings = drivers!
+    }
+    
+    func showError(_ error: Error) {
+        print("error!")
+    }
 }
