@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2E9E349C2B5F1DF1002006EC /* StandingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9E349B2B5F1DF1002006EC /* StandingModel.swift */; };
 		2E9E349F2B5F1F36002006EC /* StandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9E349E2B5F1F36002006EC /* StandingViewModel.swift */; };
+		2E9E34A12B606005002006EC /* DriverTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9E34A02B606005002006EC /* DriverTableCellView.swift */; };
+		2E9E34A32B60660A002006EC /* ConstructorColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9E34A22B60660A002006EC /* ConstructorColor.swift */; };
 		2EBB52132B5D92D3005616F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB52122B5D92D3005616F3 /* AppDelegate.swift */; };
 		2EBB52152B5D92D3005616F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB52142B5D92D3005616F3 /* SceneDelegate.swift */; };
 		2EBB521C2B5D92D4005616F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBB521B2B5D92D4005616F3 /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 /* Begin PBXFileReference section */
 		2E9E349B2B5F1DF1002006EC /* StandingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingModel.swift; sourceTree = "<group>"; };
 		2E9E349E2B5F1F36002006EC /* StandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingViewModel.swift; sourceTree = "<group>"; };
+		2E9E34A02B606005002006EC /* DriverTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverTableCellView.swift; sourceTree = "<group>"; };
+		2E9E34A22B60660A002006EC /* ConstructorColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorColor.swift; sourceTree = "<group>"; };
 		2EBB520F2B5D92D3005616F3 /* Racing Line.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Racing Line.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EBB52122B5D92D3005616F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EBB52142B5D92D3005616F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				2EBB52312B5D9402005616F3 /* ColorExtension.swift */,
+				2E9E34A22B60660A002006EC /* ConstructorColor.swift */,
 				2EBB52332B5D943B005616F3 /* UIViewPin.swift */,
 			);
 			path = Extension;
@@ -236,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				2EBB52532B5DB1A1005616F3 /* RacingTableCellView.swift */,
+				2E9E34A02B606005002006EC /* DriverTableCellView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -323,10 +329,12 @@
 				2EBB522E2B5D93C1005616F3 /* NetworkError.swift in Sources */,
 				2EBB52322B5D9402005616F3 /* ColorExtension.swift in Sources */,
 				2EBB523E2B5D9698005616F3 /* HomeViewController.swift in Sources */,
+				2E9E34A32B60660A002006EC /* ConstructorColor.swift in Sources */,
 				2EBB524B2B5DAF5B005616F3 /* RaceTableModel.swift in Sources */,
 				2EBB52542B5DB1A1005616F3 /* RacingTableCellView.swift in Sources */,
 				2EBB52342B5D943B005616F3 /* UIViewPin.swift in Sources */,
 				2EBB52152B5D92D3005616F3 /* SceneDelegate.swift in Sources */,
+				2E9E34A12B606005002006EC /* DriverTableCellView.swift in Sources */,
 				2EBB522C2B5D93A1005616F3 /* Network.swift in Sources */,
 				2EBB52462B5D96BF005616F3 /* VisualizeViewController.swift in Sources */,
 			);
