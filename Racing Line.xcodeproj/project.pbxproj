@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E9E349C2B5F1DF1002006EC /* StandingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9E349B2B5F1DF1002006EC /* StandingModel.swift */; };
+		2E9E349F2B5F1F36002006EC /* StandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9E349E2B5F1F36002006EC /* StandingViewModel.swift */; };
 		2EBB52132B5D92D3005616F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB52122B5D92D3005616F3 /* AppDelegate.swift */; };
 		2EBB52152B5D92D3005616F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB52142B5D92D3005616F3 /* SceneDelegate.swift */; };
 		2EBB521C2B5D92D4005616F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBB521B2B5D92D4005616F3 /* Assets.xcassets */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E9E349B2B5F1DF1002006EC /* StandingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingModel.swift; sourceTree = "<group>"; };
+		2E9E349E2B5F1F36002006EC /* StandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingViewModel.swift; sourceTree = "<group>"; };
 		2EBB520F2B5D92D3005616F3 /* Racing Line.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Racing Line.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EBB52122B5D92D3005616F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EBB52142B5D92D3005616F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E9E349D2B5F1EE1002006EC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2E9E349E2B5F1F36002006EC /* StandingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		2EBB52062B5D92D3005616F3 = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +183,7 @@
 		2EBB52382B5D959A005616F3 /* Standing */ = {
 			isa = PBXGroup;
 			children = (
+				2E9E349D2B5F1EE1002006EC /* ViewModel */,
 				2EBB52412B5D96A9005616F3 /* StandingViewController.swift */,
 			);
 			path = Standing;
@@ -196,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				2EBB52482B5DAF41005616F3 /* RaceModel.swift */,
+				2E9E349B2B5F1DF1002006EC /* StandingModel.swift */,
 				2EBB524A2B5DAF5B005616F3 /* RaceTableModel.swift */,
 				2EBB524C2B5DAF6D005616F3 /* CircuitModel.swift */,
 			);
@@ -301,6 +315,8 @@
 				2EBB523C2B5D967D005616F3 /* TabBarViewController.swift in Sources */,
 				2EBB52302B5D93DD005616F3 /* NetworkService.swift in Sources */,
 				2EBB52402B5D96A1005616F3 /* RacingViewController.swift in Sources */,
+				2E9E349F2B5F1F36002006EC /* StandingViewModel.swift in Sources */,
+				2E9E349C2B5F1DF1002006EC /* StandingModel.swift in Sources */,
 				2EBB52132B5D92D3005616F3 /* AppDelegate.swift in Sources */,
 				2EBB52442B5D96B3005616F3 /* CircuitViewController.swift in Sources */,
 				2EBB52422B5D96A9005616F3 /* StandingViewController.swift in Sources */,
