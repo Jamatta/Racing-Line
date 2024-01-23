@@ -77,8 +77,7 @@ struct RacingTableCellView: View {
             dateInfoView
             contentView
         }
-        .padding(12)
+        .padding(.horizontal, 12)
         .frame(maxWidth: .infinity)
-        .background(AppColors.layer)
     }
 }

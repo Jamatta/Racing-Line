@@ -13,9 +13,10 @@ final class RacingViewController: UIViewController, UITableViewDelegate {
     private var races = [Race]()
     
     private lazy var tableView: UITableView = {
-        let tableView = UITableView()
+        let tableView = UITableView(frame: .zero, style: .plain)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.allowsSelection = false
         
         return tableView
     }()
@@ -44,10 +45,11 @@ final class RacingViewController: UIViewController, UITableViewDelegate {
 extension RacingViewController: RacingViewModelDelegate {
     func racingInfoGot(_ data: MRData) {
         
-        let race = data.raceTable.races
-        races = race
+        guard let raceData = data.raceTable else {
+            return
+        }
+        races = raceData.races
         tableView.reloadData()
-        
     }
     
     func showError(_ error: Error) {
@@ -68,7 +70,6 @@ extension RacingViewController: UITableViewDataSource {
             RacingTableCellView(race: race)
         })
         
-        cell.textLabel?.text = race.raceName
         return cell
     }
 }
