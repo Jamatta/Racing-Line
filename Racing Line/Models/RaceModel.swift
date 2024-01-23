@@ -22,11 +22,13 @@ struct MRData: Decodable {
     let series: String
     let url: String
     let limit, offset, total: String
-    let raceTable: RaceTable
+    let raceTable: RaceTable?
+    let standingsTable: StandingsTable?
 
     enum CodingKeys: String, CodingKey {
         case xmlns, series, url, limit, offset, total
         case raceTable = "RaceTable"
+        case standingsTable = "StandingsTable"
     }
 }
 
