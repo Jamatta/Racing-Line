@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct AppColors {
-    static let background = isLightMode ? Color(UIColor(hex: "#F7F7F7")) : Color(UIColor(hex: "#000000"))
-    static let layer = isLightMode ? Color(UIColor(hex: "#ffffff")) : Color(UIColor(hex: "#161616"))
-    static let textPrimary = isLightMode ? Color(UIColor(hex: "#1A1C20")) : Color(UIColor(hex: "#F3F3F3"))
-    static let textSecondary = isLightMode ? Color(UIColor(hex: "#767E85")) : Color(UIColor(hex: "#8F8F8F"))
-    static let accentColor = isLightMode ? Color(UIColor(hex: "#DD3E86")) : Color(UIColor(hex: "#DD3E86"))
-    static let accentShade = isLightMode ? Color(UIColor(hex: "#DD3E86")) : Color(UIColor(hex: "#DD3E86"))
-    static let gray = isLightMode ? Color(UIColor(hex: "#E9E9E9")) : Color(UIColor(hex: "#36353A"))
+    static let background = 
+    isLightMode ? Color(UIColor(hex: "#F7F7F7")) : Color(UIColor(hex: "#000000"))
+    static let layer =
+    isLightMode ? Color(UIColor(hex: "#ffffff")) : Color(UIColor(hex: "#161616"))
+    static let textPrimary =
+    isLightMode ? Color(UIColor(hex: "#1A1C20")) : Color(UIColor(hex: "#F3F3F3"))
+    static let textSecondary =
+    isLightMode ? Color(UIColor(hex: "#767E85")) : Color(UIColor(hex: "#8F8F8F"))
+    static let accentColor =
+    isLightMode ? Color(UIColor(hex: "#F01E29")) : Color(UIColor(hex: "#F01E29"))
+    static let accentShade =
+    isLightMode ? Color(UIColor(hex: "#F01E29")) : Color(UIColor(hex: "#F01E29"))
+    static let gray =
+    isLightMode ? Color(UIColor(hex: "#E9E9E9")) : Color(UIColor(hex: "#36353A"))
 }
 
 extension UIColor {
