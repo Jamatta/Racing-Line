@@ -8,40 +8,39 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let vc1 = HomeViewController()
         let vc2 = RacingViewController()
         let vc3 = StandingViewController()
         let vc4 = CircuitViewController()
         let vc5 = VisualizeViewController()
-
+        
         let nav1 = createNavigationController(for: vc1, title: "Home", imageName: "house.fill")
         let nav2 = createNavigationController(for: vc2, title: "Racing", imageName: "flag.checkered")
         let nav3 = createNavigationController(for: vc3, title: "Standings", imageName: "trophy.fill")
         let nav4 = createNavigationController(for: vc4, title: "Circuit", imageName: "visionpro")
         let nav5 = createNavigationController(for: vc5, title: "Visualize", imageName: "play.tv.fill")
-
+        
         setViewControllers([nav1, nav2, nav3, nav4, nav5], animated: true)
         
         customizeTabBarAppearance()
     }
-
+    
     private func createNavigationController(for viewController: UIViewController, title: String, imageName: String) -> UINavigationController {
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.tabBarItem.title = title
         navigationController.tabBarItem.image = UIImage(systemName: imageName)
-        // You can customize other navigation properties here
         return navigationController
     }
     
     private func customizeTabBarAppearance() {
-           // Customize the appearance of the entire tab bar
-        UITabBar.appearance().barTintColor = UIColor(AppColors.background) // Set your custom color
-           UITabBar.appearance().tintColor = UIColor(AppColors.accentColor) // Set the color of selected items
-           UITabBar.appearance().unselectedItemTintColor = UIColor(AppColors.textSecondary) // Set the color of unselected items
-       }
+        UITabBar.appearance().barTintColor = UIColor(AppColors.background)
+        UITabBar.appearance().tintColor = UIColor(AppColors.accentColor)
+        UITabBar.appearance().unselectedItemTintColor = UIColor(AppColors.textSecondary)
+        UITabBar.appearance().backgroundColor = UIColor(AppColors.background)
+    }
 }
 
