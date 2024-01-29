@@ -22,13 +22,34 @@ final class StandingViewModel {
         self.networkManager = networkManager
     }
     
-    func viewDidLoad() {
-        getStandingInfo()
-    }
+//    func viewDidLoad() {
+//        loadDriversData()
+//    }
     
     //MARK: - Methods
-    private func getStandingInfo() {
+    func loadDriversData() {
         let baseURL = "https://ergast.com/api/f1/current/driverStandings"
+        let prefixURL = ".json"
+        let url = baseURL + prefixURL
+        
+        guard let urlString = URL(string: url) else {
+            return
+        }
+        
+        networkManager.request(with: urlString) { [weak self] (result: Result<StandingResponse, Error>) in
+            switch result {
+            case .success(let data):
+                DispatchQueue.main.async {
+                    self?.delegate?.standingInfoGot(data)
+                }
+            case .failure(let error):
+                self?.delegate?.showError(error)
+            }
+        }
+    }
+    
+    func loadTeamsData() {
+        let baseURL = "https://ergast.com/api/f1/current/constructorStandings"
         let prefixURL = ".json"
         let url = baseURL + prefixURL
         
