@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E81BF5F2B670175007F41F2 /* DriverDetailedViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81BF5E2B670175007F41F2 /* DriverDetailedViewComponent.swift */; };
+		2E81BF622B684E8D007F41F2 /* TeamTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81BF612B684E8D007F41F2 /* TeamTableCellView.swift */; };
 		2E9E349C2B5F1DF1002006EC /* StandingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9E349B2B5F1DF1002006EC /* StandingModel.swift */; };
 		2E9E349F2B5F1F36002006EC /* StandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9E349E2B5F1F36002006EC /* StandingViewModel.swift */; };
 		2E9E34A12B606005002006EC /* DriverTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9E34A02B606005002006EC /* DriverTableCellView.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		2E81BF5E2B670175007F41F2 /* DriverDetailedViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailedViewComponent.swift; sourceTree = "<group>"; };
+		2E81BF612B684E8D007F41F2 /* TeamTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableCellView.swift; sourceTree = "<group>"; };
 		2E9E349B2B5F1DF1002006EC /* StandingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingModel.swift; sourceTree = "<group>"; };
 		2E9E349E2B5F1F36002006EC /* StandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingViewModel.swift; sourceTree = "<group>"; };
 		2E9E34A02B606005002006EC /* DriverTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverTableCellView.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E81BF602B683FB7007F41F2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2EBB52412B5D96A9005616F3 /* StandingViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2E9E349D2B5F1EE1002006EC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,8 +200,8 @@
 		2EBB52382B5D959A005616F3 /* Standing */ = {
 			isa = PBXGroup;
 			children = (
+				2E81BF602B683FB7007F41F2 /* View */,
 				2E9E349D2B5F1EE1002006EC /* ViewModel */,
-				2EBB52412B5D96A9005616F3 /* StandingViewController.swift */,
 			);
 			path = Standing;
 			sourceTree = "<group>";
@@ -245,6 +255,7 @@
 				2EBB52532B5DB1A1005616F3 /* RacingTableCellView.swift */,
 				2E9E34A02B606005002006EC /* DriverTableCellView.swift */,
 				2E81BF5E2B670175007F41F2 /* DriverDetailedViewComponent.swift */,
+				2E81BF612B684E8D007F41F2 /* TeamTableCellView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -330,6 +341,7 @@
 				2EBB52442B5D96B3005616F3 /* CircuitViewController.swift in Sources */,
 				2EBB52422B5D96A9005616F3 /* StandingViewController.swift in Sources */,
 				2EBB522E2B5D93C1005616F3 /* NetworkError.swift in Sources */,
+				2E81BF622B684E8D007F41F2 /* TeamTableCellView.swift in Sources */,
 				2EBB52322B5D9402005616F3 /* ColorExtension.swift in Sources */,
 				2EBB523E2B5D9698005616F3 /* HomeViewController.swift in Sources */,
 				2E81BF5F2B670175007F41F2 /* DriverDetailedViewComponent.swift in Sources */,

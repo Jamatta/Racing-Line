@@ -30,11 +30,13 @@ struct StandingsTable: Decodable {
 // MARK: - StandingsList
 struct StandingsList: Decodable {
     let season, round: String
-    let driverStandings: [DriverStanding]
+    let driverStandings: [DriverStanding]?
+    let constructorStandings: [ConstructorStanding]?
 
     enum CodingKeys: String, CodingKey {
         case season, round
         case driverStandings = "DriverStandings"
+        case constructorStandings = "ConstructorStandings"
     }
 }
 
@@ -72,5 +74,16 @@ struct Driver: Decodable {
     enum CodingKeys: String, CodingKey {
         case driverID = "driverId"
         case permanentNumber, code, url, givenName, familyName, dateOfBirth, nationality
+    }
+}
+
+// MARK: - ConstructorStanding
+struct ConstructorStanding: Decodable {
+    let position, positionText, points, wins: String
+    let constructor: Constructor
+
+    enum CodingKeys: String, CodingKey {
+        case position, positionText, points, wins
+        case constructor = "Constructor"
     }
 }

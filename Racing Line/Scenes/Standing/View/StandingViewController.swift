@@ -18,6 +18,7 @@ final class StandingViewController: UIViewController, UITableViewDelegate {
     //MARK: - Properties
     private var viewModel: StandingViewModel = StandingViewModel(networkManager: Network())
     private var driverStandings = [DriverStanding]()
+    private var teamStandings = [ConstructorStanding]()
     let items: [StandingSegment] = [.drivers, .teams]
     
     //MARK: - Components
@@ -37,20 +38,20 @@ final class StandingViewController: UIViewController, UITableViewDelegate {
         return control
     }()
     
+    //MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(AppColors.background)
         setupViewModelDelegate()
         viewSetup()
-        
     }
     
-    //MARK: - Methods
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.loadDriversData()
     }
     
+    //MARK: - viewSetup
     private func viewSetup() {
         view.addSubview(segmentedControl)
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
@@ -59,7 +60,7 @@ final class StandingViewController: UIViewController, UITableViewDelegate {
             segmentedControl.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             segmentedControl.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ])
-
+        
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -69,16 +70,17 @@ final class StandingViewController: UIViewController, UITableViewDelegate {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
-
+    
     private func setupViewModelDelegate() {
         viewModel.delegate = self
     }
     
+    //MARK: - Methods
     @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
         guard let selectedSegment = StandingSegment(rawValue: sender.titleForSegment(at: sender.selectedSegmentIndex) ?? "") else {
             return
         }
-
+        
         switch selectedSegment {
         case .drivers:
             print("Switched to Drivers")
@@ -91,14 +93,15 @@ final class StandingViewController: UIViewController, UITableViewDelegate {
 }
 
 extension StandingViewController: StandingViewModelDelegate {
-    func standingInfoGot(_ data: StandingResponse) {
-        
-        guard let drivers = data.mrData.standingsTable?.standingsLists.first?.driverStandings else {
-            return
+    func standingInfoGot<T>(_ data: T) {
+        if let drivers = data as? [DriverStanding] {
+            driverStandings = drivers
+            tableView.reloadData()
+        } else if let teams = data as? [ConstructorStanding] {
+            print(teams.first?.constructor.name ?? "None")
+            teamStandings = teams
+            tableView.reloadData()
         }
-        
-        driverStandings = drivers
-        tableView.reloadData()
     }
     
     func showError(_ error: Error) {
@@ -108,16 +111,34 @@ extension StandingViewController: StandingViewModelDelegate {
 
 extension StandingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        driverStandings.count
+        switch segmentedControl.selectedSegmentIndex {
+        case items.firstIndex(of: .drivers):
+            return driverStandings.count
+        case items.firstIndex(of: .teams):
+            return teamStandings.count
+        default:
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let driver = driverStandings[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        cell.contentConfiguration = UIHostingConfiguration(content: {
-            DriverTableCellView(driverStanding: driver)
-        })
+        switch segmentedControl.selectedSegmentIndex {
+        case items.firstIndex(of: .drivers):
+            let driver = driverStandings[indexPath.row]
+            cell.contentConfiguration = UIHostingConfiguration(content: {
+                DriverTableCellView(driverStanding: driver)
+            })
+        case items.firstIndex(of: .teams):
+            let team = teamStandings[indexPath.row]
+            cell.contentConfiguration = UIHostingConfiguration(content: {
+                TeamTableCellView(teamStanding: team)
+            })
+        default:
+            break
+        }
         
         return cell
     }

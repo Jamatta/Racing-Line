@@ -45,11 +45,6 @@ struct DriverTableCellView: View {
                 
             }
         }
-        
-        
-        
-        
-        
     }
 }
 
