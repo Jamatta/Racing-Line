@@ -8,7 +8,7 @@
 import Foundation
 
 protocol StandingViewModelDelegate: AnyObject {
-    func standingInfoGot(_ data: StandingResponse)
+    func standingInfoGot<T>(_ data: T)
     func showError(_ error: Error)
 }
 
@@ -39,8 +39,12 @@ final class StandingViewModel {
         networkManager.request(with: urlString) { [weak self] (result: Result<StandingResponse, Error>) in
             switch result {
             case .success(let data):
+                
                 DispatchQueue.main.async {
-                    self?.delegate?.standingInfoGot(data)
+                    guard let driverData = data.mrData.standingsTable?.standingsLists.first?.driverStandings else {
+                        return
+                    }
+                    self?.delegate?.standingInfoGot(driverData)
                 }
             case .failure(let error):
                 self?.delegate?.showError(error)
@@ -61,8 +65,12 @@ final class StandingViewModel {
             switch result {
             case .success(let data):
                 DispatchQueue.main.async {
-                    self?.delegate?.standingInfoGot(data)
+                    guard let teamData = data.mrData.standingsTable?.standingsLists.first?.constructorStandings else {
+                        return
+                    }
+                    self?.delegate?.standingInfoGot(teamData)
                 }
+                    
             case .failure(let error):
                 self?.delegate?.showError(error)
             }
