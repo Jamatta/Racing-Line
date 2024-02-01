@@ -9,11 +9,18 @@ import SwiftUI
 
 struct DriverDetailViewController: View {
     var body: some View {
-        
+        ZStack {
+            driverContentView
+        }
+        .ignoresSafeArea(.all)
+        .background(AppColors.background)
+    }
+    
+    private var driverContentView: some View {
         VStack(spacing: 40) {
             DriverDetailedViewComponent()
                 .padding(.top, 40)
-                .background(AppColors.background)
+                .background(AppColors.layer)
             
             VStack(spacing: 40) {
                 statsSectionInfoView
@@ -21,6 +28,7 @@ struct DriverDetailViewController: View {
                 teamsInfoView
             }
         }
+        .padding(.bottom, 40)
     }
     
     private var statsSectionInfoView: some View {
@@ -33,11 +41,8 @@ struct DriverDetailViewController: View {
     }
     
     private var birthSectionInfoView: some View {
-        HStack  {
-            VStack(alignment: .leading, spacing: 12) {
-                birthInfoView
-            }
-            Spacer()
+        HStack {
+            birthInfoView
         }
         .padding(.horizontal, 20)
     }
@@ -71,23 +76,32 @@ struct DriverDetailViewController: View {
     }
     
     private var birthInfoView: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: 2) {
             BioListComponent(
-                infoLabel: "nationality",
+                infoLabel: "Nationality",
                 infoText: "Dutch"
             )
             
+            Rectangle()
+                .foregroundColor(AppColors.background)
+                .frame(height: 1)
+            
             BioListComponent(
-                infoLabel: "birthday",
+                infoLabel: "Birthday",
                 infoText: "1997-09-30"
             )
             
+            Rectangle()
+                .foregroundColor(AppColors.background)
+                .frame(height: 1)
+            
             BioListComponent(
-                infoLabel: "birthPlace",
+                infoLabel: "BirthPlace",
                 infoText: "Hasselt, Belgium"
             )
         }
-        
+        .background(AppColors.layer)
+        .cornerRadius(8)
     }
     
     private var teamsInfoView: some View {
@@ -102,7 +116,7 @@ struct DriverDetailViewController: View {
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: 110, height: 80)
-            .background(AppColors.background)
+            .background(AppColors.layer)
             .cornerRadius(8)
     }
 }

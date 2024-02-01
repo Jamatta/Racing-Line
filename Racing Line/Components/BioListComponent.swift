@@ -10,8 +10,8 @@ import SwiftUI
 struct BioListComponent: View {
     
     //MARK: - Properties
-    var infoLabel: String
-    var infoText: String
+    var infoLabel: String = "ცანგალა"
+    var infoText: String = "გოგონა"
     
     //MARK: - Body
     var body: some View {
@@ -20,20 +20,28 @@ struct BioListComponent: View {
     
     //MARK: - Components
     private var bioListView: some View {
-        VStack(alignment: .leading) {
+        HStack {
             Text(infoLabel)
                 .font(Font.system(size: 14))
                 .foregroundStyle(AppColors.textSecondary)
-                .padding(.horizontal, 2)
-                .background(AppColors.background)
+            
+            Spacer()
             
             Text(infoText)
-                .font(Font.system(size: 18))
-                .fontWeight(.black)
+                .font(Font.system(size: 16))
+                .fontWeight(.bold)
                 .foregroundStyle(AppColors.textPrimary)
             
         }
+        .cornerRadius(8)
+        .padding(.horizontal, 12)
+        .padding(.vertical, 16)
+        .background(AppColors.layer)
     }
 }
 
+#Preview {
+        BioListComponent()
+    
+}
 
