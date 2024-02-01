@@ -1,5 +1,5 @@
 //
-//  DriverInfoSectionComponent.swift
+//  DetailInfoCardView.swift
 //  Racing Line
 //
 //  Created by Nika Jamatashvili on 01.02.24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DriverInfoSectionComponent: View {
+struct DetailInfoCardView: View {
     
     //MARK: - Properties
     var infoLabel: String
