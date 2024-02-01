@@ -50,24 +50,24 @@ struct DriverDetailViewController: View {
     private var statsInfoView: some View {
         VStack {
             HStack {
-                DriverInfoSectionComponent(
+                DetailInfoCardView(
                     infoLabel: "🏁 Races",
                     infoText: "185"
                 )
                 
-                DriverInfoSectionComponent(
+                DetailInfoCardView(
                     infoLabel: "🏆 World title",
                     infoText: "3"
                 )
             }
             
             HStack {
-                DriverInfoSectionComponent(
+                DetailInfoCardView(
                     infoLabel: "🥇 Race wins",
                     infoText: "54"
                 )
                 
-                DriverInfoSectionComponent(
+                DetailInfoCardView(
                     infoLabel: "🥈 Podiums",
                     infoText: "98"
                 )
@@ -77,7 +77,7 @@ struct DriverDetailViewController: View {
     
     private var birthInfoView: some View {
         VStack(alignment: .leading, spacing: 2) {
-            BioListComponent(
+            DetailInfoListView(
                 infoLabel: "Nationality",
                 infoText: "Dutch"
             )
@@ -86,7 +86,7 @@ struct DriverDetailViewController: View {
                 .foregroundColor(AppColors.background)
                 .frame(height: 1)
             
-            BioListComponent(
+            DetailInfoListView(
                 infoLabel: "Birthday",
                 infoText: "1997-09-30"
             )
@@ -95,7 +95,7 @@ struct DriverDetailViewController: View {
                 .foregroundColor(AppColors.background)
                 .frame(height: 1)
             
-            BioListComponent(
+            DetailInfoListView(
                 infoLabel: "BirthPlace",
                 infoText: "Hasselt, Belgium"
             )

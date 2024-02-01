@@ -1,5 +1,5 @@
 //
-//  BioListComponent.swift
+//  DetailInfoListView.swift
 //  Racing Line
 //
 //  Created by Nika Jamatashvili on 01.02.24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BioListComponent: View {
+struct DetailInfoListView: View {
     
     //MARK: - Properties
     var infoLabel: String
