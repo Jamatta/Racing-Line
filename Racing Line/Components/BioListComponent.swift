@@ -10,8 +10,8 @@ import SwiftUI
 struct BioListComponent: View {
     
     //MARK: - Properties
-    var infoLabel: String = "ცანგალა"
-    var infoText: String = "გოგონა"
+    var infoLabel: String
+    var infoText: String
     
     //MARK: - Body
     var body: some View {
@@ -39,9 +39,3 @@ struct BioListComponent: View {
         .background(AppColors.layer)
     }
 }
-
-#Preview {
-        BioListComponent()
-    
-}
-

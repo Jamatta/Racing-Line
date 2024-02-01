@@ -9,8 +9,10 @@ import SwiftUI
 
 struct DriverTableCellView: View {
     
+    //MARK: - Properties
     var driverStanding: DriverStanding
     
+    //MARK: - ody
     var body: some View {
         HStack(spacing: 10) {
             
