@@ -36,6 +36,7 @@
 		2EBB524D2B5DAF6D005616F3 /* CircuitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB524C2B5DAF6D005616F3 /* CircuitModel.swift */; };
 		2EBB52512B5DB0CA005616F3 /* RacingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB52502B5DB0CA005616F3 /* RacingViewModel.swift */; };
 		2EBB52542B5DB1A1005616F3 /* RacingTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB52532B5DB1A1005616F3 /* RacingTableCellView.swift */; };
+		2EE0FCD42B6D96720028B9BB /* CircuitDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE0FCD32B6D96720028B9BB /* CircuitDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		2EBB524C2B5DAF6D005616F3 /* CircuitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitModel.swift; sourceTree = "<group>"; };
 		2EBB52502B5DB0CA005616F3 /* RacingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacingViewModel.swift; sourceTree = "<group>"; };
 		2EBB52532B5DB1A1005616F3 /* RacingTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacingTableCellView.swift; sourceTree = "<group>"; };
+		2EE0FCD32B6D96720028B9BB /* CircuitDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,8 +220,8 @@
 		2EBB52392B5D95A3005616F3 /* Circuit */ = {
 			isa = PBXGroup;
 			children = (
-				2EBB52432B5D96B3005616F3 /* CircuitViewController.swift */,
-				2E6282A82B6C41A900194748 /* CircuitDetailViewController.swift */,
+				2EE0FCD12B6D95B00028B9BB /* View */,
+				2EE0FCD22B6D95BF0028B9BB /* ViewModel */,
 			);
 			path = Circuit;
 			sourceTree = "<group>";
@@ -270,6 +272,23 @@
 				2E6C375A2B6C107D00645182 /* DetailInfoCardView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		2EE0FCD12B6D95B00028B9BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2EBB52432B5D96B3005616F3 /* CircuitViewController.swift */,
+				2E6282A82B6C41A900194748 /* CircuitDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2EE0FCD22B6D95BF0028B9BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2EE0FCD32B6D96720028B9BB /* CircuitDetailViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +374,7 @@
 				2EBB522E2B5D93C1005616F3 /* NetworkError.swift in Sources */,
 				2E81BF622B684E8D007F41F2 /* TeamTableCellView.swift in Sources */,
 				2EBB52322B5D9402005616F3 /* ColorExtension.swift in Sources */,
+				2EE0FCD42B6D96720028B9BB /* CircuitDetailViewModel.swift in Sources */,
 				2EBB523E2B5D9698005616F3 /* HomeViewController.swift in Sources */,
 				2E81BF5F2B670175007F41F2 /* DriverDetailedViewComponent.swift in Sources */,
 				2E9E34A32B60660A002006EC /* ConstructorColor.swift in Sources */,
