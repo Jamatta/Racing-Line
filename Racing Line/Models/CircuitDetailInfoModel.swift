@@ -11,12 +11,12 @@ import Foundation
 struct CircuitDetailResponse: Decodable {
     let get: String
     let parameters: Parameters
-    let errors: [String]
+ //   let errors: [String]
     let results: Int
     let response: [CircuitDetail]
 
     enum CodingKeys: String, CodingKey {
-        case get, parameters, errors, results, response
+        case get, parameters, results, response
     }
 }
 
@@ -35,7 +35,8 @@ struct CircuitDetail: Decodable {
     let laps: Int
     let length, raceDistance: String
     let lapRecord: LapRecord
-    let capacity, opened: Int
+    let capacity: Int?
+    let opened: Int?
     let owner: String?
 
     enum CodingKeys: String, CodingKey {
@@ -61,5 +62,5 @@ struct CircuitLocation: Decodable {
 // MARK: - LapRecord
 struct LapRecord: Decodable {
     let time, driver: String?
-    let year: String
+    let year: String?
 }

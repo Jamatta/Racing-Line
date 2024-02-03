@@ -10,13 +10,18 @@ import SwiftUI
 struct CircuitDetailViewController: View {
     
     //MARK: - Properties
-//    var circuit: CircuitDetail
+    @ObservedObject var viewModel = CircuitDetailViewModel()
+    var circuitName: String
     
     //MARK: - Body
     var body: some View {
         ScrollView {
             circuitContentView
         }
+        .onAppear{
+            viewModel.viewDidLoad(circuitId: circuitName)
+        }
+        
     }
     
     //MARK: - Components
@@ -42,14 +47,31 @@ struct CircuitDetailViewController: View {
     }
     
     private var circuitImageView: some View {
-        Image("albert")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(height: 280)
+        presentImage()
+    }
+    
+    private func presentImage() -> some View {
+        let imageURL = URL(string: viewModel.circuit?.image ?? "placeholder")
+        
+        return AsyncImage(
+            url: imageURL,
+            content: { fetchedImage in
+                fetchedImage
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 260)
+                
+            }, placeholder: {
+                Image("defaultImage")
+                    .resizable()
+                    .cornerRadius(6)
+                    .frame(width: 100, height: 140)
+                    .scaledToFit()
+            })
     }
     
     private var circuitTitleView: some View {
-        Text("Albert Park Circuit")
+        Text(viewModel.circuit?.name ?? "circuit name")
             .font(Font.system(size: 20))
             .fontWeight(.bold)
             .foregroundStyle(AppColors.textPrimary)
@@ -60,19 +82,19 @@ struct CircuitDetailViewController: View {
             HStack {
                 DetailInfoCardView(
                     infoLabel: "Laps",
-                    infoText: "58"
+                    infoText: String(viewModel.circuit?.laps ?? 0)
                 )
                 
                 DetailInfoCardView(
                     infoLabel: "Length",
-                    infoText: "5.303 Kms"
+                    infoText: viewModel.circuit?.length ?? "length"
                 )
             }
             
             HStack {
                 DetailInfoCardView(
                     infoLabel: "Distance",
-                    infoText: "307.574 kms"
+                    infoText: viewModel.circuit?.raceDistance ?? "distance"
                 )
             }
         }
@@ -82,7 +104,7 @@ struct CircuitDetailViewController: View {
         VStack(alignment: .leading, spacing: 2) {
             DetailInfoListView(
                 infoLabel: "Fastest lap",
-                infoText: "1:24.125"
+                infoText: viewModel.circuit?.lapRecord.time ?? "time"
             )
             
             Rectangle()
@@ -91,7 +113,7 @@ struct CircuitDetailViewController: View {
             
             DetailInfoListView(
                 infoLabel: "Driver",
-                infoText: "Michael Schumacher"
+                infoText: viewModel.circuit?.lapRecord.driver ?? "driver"
             )
             
             Rectangle()
@@ -100,7 +122,7 @@ struct CircuitDetailViewController: View {
             
             DetailInfoListView(
                 infoLabel: "Year",
-                infoText: "2004"
+                infoText: viewModel.circuit?.lapRecord.year ?? "year"
             )
         }
         .background(AppColors.layer)
@@ -108,6 +130,3 @@ struct CircuitDetailViewController: View {
     }
 }
 
-#Preview {
-    CircuitDetailViewController()
-}

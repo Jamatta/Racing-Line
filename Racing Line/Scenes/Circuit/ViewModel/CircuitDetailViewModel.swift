@@ -5,20 +5,15 @@
 //  Created by Nika Jamatashvili on 03.02.24.
 //
 
-import UIKit
+import SwiftUI
 
-protocol CircuitDetailViewModelDelegate: AnyObject {
-    func circuitDetailedInfoGot(_ data: CircuitDetail)
-    func showError(_ error: Error)
-}
-
-final class CircuitDetailViewModel {
+final class CircuitDetailViewModel: ObservableObject {
     
     //MARK: - Properties
     private let networkManager: NetworkService
-    weak var delegate: CircuitDetailViewModelDelegate?
+    @Published var circuit: CircuitDetail?
     
-    init(networkManager: NetworkService) {
+    init(networkManager: NetworkService = Network()) {
         self.networkManager = networkManager
     }
     
@@ -33,13 +28,13 @@ final class CircuitDetailViewModel {
             "X-RapidAPI-Key": "77bd8595afmsh06e7aeb75dc0a5ep109682jsn19ace5726043",
             "X-RapidAPI-Host": "api-formula-1.p.rapidapi.com"
         ]
-
-        let request = NSMutableURLRequest(url: NSURL(string: "https://api-formula-1.p.rapidapi.com/circuits?id=1")! as URL,
+        
+        let request = NSMutableURLRequest(url: NSURL(string: "https://api-formula-1.p.rapidapi.com/circuits?search=\(circuitId)")! as URL,
                                           cachePolicy: .useProtocolCachePolicy,
                                           timeoutInterval: 10.0)
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
-
+        
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request as URLRequest) { (data, response, error) in
             if let error = error {
@@ -53,7 +48,7 @@ final class CircuitDetailViewModel {
                             guard let firstResponse = circuitDetailResponse.response.first else {
                                 return
                             }
-                            self.delegate?.circuitDetailedInfoGot(firstResponse)
+                            self.circuit = firstResponse
                         }
                     } catch {
                         print("Decoding Error: \(error)")
@@ -61,8 +56,6 @@ final class CircuitDetailViewModel {
                 }
             }
         }
-
         dataTask.resume()
-
     }
 }
