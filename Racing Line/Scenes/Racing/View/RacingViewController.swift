@@ -16,7 +16,6 @@ final class RacingViewController: UIViewController, UITableViewDelegate {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.allowsSelection = false
         
         return tableView
     }()
@@ -71,5 +70,11 @@ extension RacingViewController: UITableViewDataSource {
         })
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let circuitName = races[indexPath.row].circuit.circuitID
+        let vc = UIHostingController(rootView: CircuitDetailViewController(circuitName: circuitName))
+        navigationController?.present(vc, animated: true)
     }
 }

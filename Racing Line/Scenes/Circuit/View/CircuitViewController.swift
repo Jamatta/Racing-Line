@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CircuitViewController: UIViewController {
+final class CircuitViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

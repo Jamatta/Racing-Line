@@ -37,6 +37,7 @@
 		2EBB52512B5DB0CA005616F3 /* RacingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB52502B5DB0CA005616F3 /* RacingViewModel.swift */; };
 		2EBB52542B5DB1A1005616F3 /* RacingTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB52532B5DB1A1005616F3 /* RacingTableCellView.swift */; };
 		2EE0FCD42B6D96720028B9BB /* CircuitDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE0FCD32B6D96720028B9BB /* CircuitDetailViewModel.swift */; };
+		2EE0FCD62B6D9E120028B9BB /* CircuitDetailInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE0FCD52B6D9E120028B9BB /* CircuitDetailInfoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		2EBB52502B5DB0CA005616F3 /* RacingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacingViewModel.swift; sourceTree = "<group>"; };
 		2EBB52532B5DB1A1005616F3 /* RacingTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacingTableCellView.swift; sourceTree = "<group>"; };
 		2EE0FCD32B6D96720028B9BB /* CircuitDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitDetailViewModel.swift; sourceTree = "<group>"; };
+		2EE0FCD52B6D9E120028B9BB /* CircuitDetailInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitDetailInfoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,7 @@
 				2E9E349B2B5F1DF1002006EC /* StandingModel.swift */,
 				2EBB524A2B5DAF5B005616F3 /* RaceTableModel.swift */,
 				2EBB524C2B5DAF6D005616F3 /* CircuitModel.swift */,
+				2EE0FCD52B6D9E120028B9BB /* CircuitDetailInfoModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				2EBB52322B5D9402005616F3 /* ColorExtension.swift in Sources */,
 				2EE0FCD42B6D96720028B9BB /* CircuitDetailViewModel.swift in Sources */,
 				2EBB523E2B5D9698005616F3 /* HomeViewController.swift in Sources */,
+				2EE0FCD62B6D9E120028B9BB /* CircuitDetailInfoModel.swift in Sources */,
 				2E81BF5F2B670175007F41F2 /* DriverDetailedViewComponent.swift in Sources */,
 				2E9E34A32B60660A002006EC /* ConstructorColor.swift in Sources */,
 				2E6C37592B6BF16900645182 /* DetailInfoListView.swift in Sources */,
