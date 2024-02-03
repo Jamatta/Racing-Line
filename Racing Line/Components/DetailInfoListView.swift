@@ -28,8 +28,8 @@ struct DetailInfoListView: View {
             Spacer()
             
             Text(infoText)
-                .font(Font.system(size: 16))
-                .fontWeight(.bold)
+                .font(Font.system(size: 14))
+                .fontWeight(.semibold)
                 .foregroundStyle(AppColors.textPrimary)
             
         }

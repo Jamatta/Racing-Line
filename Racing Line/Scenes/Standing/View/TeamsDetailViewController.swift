@@ -12,7 +12,8 @@ struct TeamsDetailViewController: View {
         teamContentHeader
         
         VStack (spacing: 40) {
-            
+            driverInfoCardView()
+
             teamInfoCardView
             
             teamInfoListView
@@ -128,4 +129,43 @@ struct TeamsDetailViewController: View {
 
 #Preview {
     TeamsDetailViewController()
+}
+
+struct driverInfoCardView : View {
+    
+    var driverName: String = "Max Verstappen"
+    var driverImage: String = "max_verstappen"
+    var driverNumber: String = "1"
+    
+    var body: some View {
+        bioListView
+    }
+    
+    private var bioListView: some View {
+        HStack(spacing: 12) {
+            Image(driverImage)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 40, height: 40)
+                .cornerRadius(20)
+            
+            Text(driverName)
+                .font(Font.system(size: 16))
+                .fontWeight(.semibold)
+                .foregroundStyle(AppColors.textPrimary)
+            
+            Spacer()
+            
+            Text("# \(driverNumber)")
+                .font(Font.system(size: 20))
+                .fontWeight(.semibold)
+                .foregroundStyle(AppColors.textSecondary)
+        }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 16)
+        .background(AppColors.layer)
+        .cornerRadius(8)
+
+    }
+    
 }
