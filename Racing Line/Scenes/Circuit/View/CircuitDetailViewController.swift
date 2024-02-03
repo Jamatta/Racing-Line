@@ -10,7 +10,7 @@ import SwiftUI
 struct CircuitDetailViewController: View {
     
     //MARK: - Properties
-    var circuit: CircuitDetail
+//    var circuit: CircuitDetail
     
     //MARK: - Body
     var body: some View {
@@ -49,7 +49,7 @@ struct CircuitDetailViewController: View {
     }
     
     private var circuitTitleView: some View {
-        Text(circuit.name)
+        Text("Albert Park Circuit")
             .font(Font.system(size: 20))
             .fontWeight(.bold)
             .foregroundStyle(AppColors.textPrimary)
@@ -60,19 +60,19 @@ struct CircuitDetailViewController: View {
             HStack {
                 DetailInfoCardView(
                     infoLabel: "Laps",
-                    infoText: String(circuit.laps)
+                    infoText: "58"
                 )
                 
                 DetailInfoCardView(
                     infoLabel: "Length",
-                    infoText: String(circuit.length)
+                    infoText: "5.303 Kms"
                 )
             }
             
             HStack {
                 DetailInfoCardView(
                     infoLabel: "Distance",
-                    infoText: circuit.raceDistance
+                    infoText: "307.574 kms"
                 )
             }
         }
@@ -82,7 +82,7 @@ struct CircuitDetailViewController: View {
         VStack(alignment: .leading, spacing: 2) {
             DetailInfoListView(
                 infoLabel: "Fastest lap",
-                infoText: circuit.lapRecord.time ?? "time"
+                infoText: "1:24.125"
             )
             
             Rectangle()
@@ -91,7 +91,7 @@ struct CircuitDetailViewController: View {
             
             DetailInfoListView(
                 infoLabel: "Driver",
-                infoText: circuit.lapRecord.driver ?? "driver"
+                infoText: "Michael Schumacher"
             )
             
             Rectangle()
@@ -100,7 +100,7 @@ struct CircuitDetailViewController: View {
             
             DetailInfoListView(
                 infoLabel: "Year",
-                infoText: circuit.lapRecord.year
+                infoText: "2004"
             )
         }
         .background(AppColors.layer)
@@ -108,3 +108,6 @@ struct CircuitDetailViewController: View {
     }
 }
 
+#Preview {
+    CircuitDetailViewController()
+}
