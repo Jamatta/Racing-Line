@@ -112,7 +112,7 @@ struct DriverDetailViewController: View {
     }
     
     private var teamImageView: some View {
-        Image("leclerc")
+        Image("aplogo")
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: 110, height: 80)
