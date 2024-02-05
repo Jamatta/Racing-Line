@@ -18,10 +18,9 @@ struct CircuitDetailViewController: View {
         ScrollView {
             circuitContentView
         }
-        .onAppear{
+        .onAppear {
             viewModel.viewDidLoad(circuitId: circuitName)
         }
-        
     }
     
     //MARK: - Components
