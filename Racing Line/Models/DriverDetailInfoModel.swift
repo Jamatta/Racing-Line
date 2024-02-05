@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 // MARK: - DriverDetailResponse
 struct DriverDetailResponse: Decodable {
     let get: String
