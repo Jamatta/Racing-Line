@@ -26,7 +26,6 @@ final class StandingViewController: UIViewController, UITableViewDelegate {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.allowsSelection = false
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         return tableView
     }()
@@ -122,7 +121,7 @@ extension StandingViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let driver = driverStandings[indexPath.row]
+//        let driver = driverStandings[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         switch segmentedControl.selectedSegmentIndex {
@@ -141,5 +140,19 @@ extension StandingViewController: UITableViewDataSource {
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch segmentedControl.selectedSegmentIndex {
+        case items.firstIndex(of: .drivers):
+            let driverName = driverStandings[indexPath.row].driver.familyName
+            let vc = UIHostingController(rootView: DriverDetailViewController(driverName: driverName))
+            navigationController?.present(vc, animated: true)
+        case items.firstIndex(of: .teams):
+            let teamName = teamStandings[indexPath.row].constructor.name
+            print(teamName)
+        default:
+            return
+        }
     }
 }

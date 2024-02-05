@@ -8,19 +8,36 @@
 import SwiftUI
 
 struct DriverDetailViewController: View {
+    
+    //MARK: - Properties
+    @ObservedObject var viewModel = DriverDetailViewModel()
+    var driverName: String
+    
+    //MARK: - Body
     var body: some View {
-        ZStack {
-            driverContentView
+        ScrollView{
+            ZStack {
+                driverContentView
+            }
+            .ignoresSafeArea(.all)
+            .background(AppColors.background)
         }
-        .ignoresSafeArea(.all)
-        .background(AppColors.background)
+        .onAppear {
+            viewModel.viewDidLoad(driverName: driverName)
+        }
     }
     
+    //MARK: - Components
     private var driverContentView: some View {
         VStack(spacing: 40) {
-            DriverDetailedViewComponent()
-                .padding(.top, 40)
-                .background(AppColors.layer)
+            DriverDetailedViewComponent(
+                driverName: viewModel.driver?.name ?? "name",
+                driverNumber: viewModel.driver?.number ?? 0,
+                driverTeam: viewModel.driver?.teams.first?.team.name ?? "name",
+                driverImage: viewModel.driver?.image ?? "default"
+            )
+            .padding(.top, 40)
+            .background(AppColors.layer)
             
             VStack(spacing: 40) {
                 statsSectionInfoView
@@ -52,24 +69,24 @@ struct DriverDetailViewController: View {
             HStack {
                 DetailInfoCardView(
                     infoLabel: "🏁 Races",
-                    infoText: "185"
+                    infoText: "\(viewModel.driver?.grandsPrixEntered ?? 0)"
                 )
                 
                 DetailInfoCardView(
                     infoLabel: "🏆 World title",
-                    infoText: "3"
+                    infoText: "\(viewModel.driver?.worldChampionships ?? 0)"
                 )
             }
             
             HStack {
                 DetailInfoCardView(
                     infoLabel: "🥇 Race wins",
-                    infoText: "54"
+                    infoText: "\(viewModel.driver?.highestRaceFinish.number ?? 0)"
                 )
                 
                 DetailInfoCardView(
                     infoLabel: "🥈 Podiums",
-                    infoText: "98"
+                    infoText: "\(viewModel.driver?.podiums ?? 0)"
                 )
             }
         }
@@ -79,7 +96,7 @@ struct DriverDetailViewController: View {
         VStack(alignment: .leading, spacing: 2) {
             DetailInfoListView(
                 infoLabel: "Nationality",
-                infoText: "Dutch"
+                infoText: viewModel.driver?.country.name ?? "country"
             )
             
             Rectangle()
@@ -88,7 +105,7 @@ struct DriverDetailViewController: View {
             
             DetailInfoListView(
                 infoLabel: "Birthday",
-                infoText: "1997-09-30"
+                infoText: viewModel.driver?.birthdate ?? "date"
             )
             
             Rectangle()
@@ -97,7 +114,7 @@ struct DriverDetailViewController: View {
             
             DetailInfoListView(
                 infoLabel: "BirthPlace",
-                infoText: "Hasselt, Belgium"
+                infoText: viewModel.driver?.birthplace ?? "place"
             )
         }
         .background(AppColors.layer)
@@ -112,16 +129,30 @@ struct DriverDetailViewController: View {
     }
     
     private var teamImageView: some View {
-        Image("leclerc")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 110, height: 80)
-            .background(AppColors.layer)
-            .cornerRadius(8)
+        presentImage()
     }
-}
-
-#Preview {
-    DriverDetailViewController()
+    
+    private func presentImage() -> some View {
+        let imageURL = URL(string: viewModel.driver?.teams.first?.team.logo ?? "placeholder")
+        
+        return AsyncImage(
+            url: imageURL,
+            content: { fetchedImage in
+                fetchedImage
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 110, height: 80)
+                    .background(AppColors.layer)
+                    .cornerRadius(8)
+                
+            }, placeholder: {
+                Image("defaultImage")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 110, height: 80)
+                    .background(AppColors.layer)
+                    .cornerRadius(8)
+            })
+    }
 }
 
