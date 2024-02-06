@@ -9,6 +9,7 @@ import UIKit
 import SwiftUI
 
 final class RacingViewController: UIViewController, UITableViewDelegate {
+    
     private var viewModel: RacingViewModel = RacingViewModel(networkManager: Network())
     private var races = [Race]()
     

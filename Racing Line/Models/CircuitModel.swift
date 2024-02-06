@@ -7,6 +7,15 @@
 
 import Foundation
 
+// MARK: - CircuitTable
+struct CircuitTable: Decodable {
+    let circuits: [Circuit]
+
+    enum CodingKeys: String, CodingKey {
+        case circuits = "Circuits"
+    }
+}
+
 // MARK: - Circuit
 struct Circuit: Decodable {
     let circuitID: String
