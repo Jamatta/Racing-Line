@@ -125,6 +125,7 @@ extension StandingViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         switch segmentedControl.selectedSegmentIndex {
+            
         case items.firstIndex(of: .drivers):
             let driver = driverStandings[indexPath.row]
             cell.contentConfiguration = UIHostingConfiguration(content: {
