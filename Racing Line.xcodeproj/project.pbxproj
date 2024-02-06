@@ -22,6 +22,7 @@
 		2E9E349F2B5F1F36002006EC /* StandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9E349E2B5F1F36002006EC /* StandingViewModel.swift */; };
 		2E9E34A12B606005002006EC /* DriverTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9E34A02B606005002006EC /* DriverTableCellView.swift */; };
 		2E9E34A32B60660A002006EC /* ConstructorColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9E34A22B60660A002006EC /* ConstructorColor.swift */; };
+		2EA250492B729C5B001A39A2 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA250482B729C5B001A39A2 /* ArticleModel.swift */; };
 		2EBB52132B5D92D3005616F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB52122B5D92D3005616F3 /* AppDelegate.swift */; };
 		2EBB52152B5D92D3005616F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB52142B5D92D3005616F3 /* SceneDelegate.swift */; };
 		2EBB521C2B5D92D4005616F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBB521B2B5D92D4005616F3 /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		2E9E349E2B5F1F36002006EC /* StandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingViewModel.swift; sourceTree = "<group>"; };
 		2E9E34A02B606005002006EC /* DriverTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverTableCellView.swift; sourceTree = "<group>"; };
 		2E9E34A22B60660A002006EC /* ConstructorColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorColor.swift; sourceTree = "<group>"; };
+		2EA250482B729C5B001A39A2 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		2EBB520F2B5D92D3005616F3 /* Racing Line.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Racing Line.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EBB52122B5D92D3005616F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EBB52142B5D92D3005616F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 				2EE0FCD52B6D9E120028B9BB /* CircuitDetailInfoModel.swift */,
 				2E7010FA2B714011003D0945 /* DriverDetailInfoModel.swift */,
 				2E7011022B718956003D0945 /* TeamDetailInfoModel.swift */,
+				2EA250482B729C5B001A39A2 /* ArticleModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				2E9E349F2B5F1F36002006EC /* StandingViewModel.swift in Sources */,
 				2E9E349C2B5F1DF1002006EC /* StandingModel.swift in Sources */,
 				2EBB52132B5D92D3005616F3 /* AppDelegate.swift in Sources */,
+				2EA250492B729C5B001A39A2 /* ArticleModel.swift in Sources */,
 				2EBB52442B5D96B3005616F3 /* CircuitViewController.swift in Sources */,
 				2EBB52422B5D96A9005616F3 /* StandingViewController.swift in Sources */,
 				2EBB522E2B5D93C1005616F3 /* NetworkError.swift in Sources */,
