@@ -150,7 +150,8 @@ extension StandingViewController: UITableViewDataSource {
             navigationController?.present(vc, animated: true)
         case items.firstIndex(of: .teams):
             let teamName = teamStandings[indexPath.row].constructor.name
-            print(teamName)
+            let vc = UIHostingController(rootView: TeamDetailViewController(teamName: teamName))
+            navigationController?.present(vc, animated: true)
         default:
             return
         }

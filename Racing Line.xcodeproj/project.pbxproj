@@ -13,6 +13,9 @@
 		2E6C375B2B6C107D00645182 /* DetailInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6C375A2B6C107D00645182 /* DetailInfoCardView.swift */; };
 		2E7010F92B713EA5003D0945 /* DriverDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7010F82B713EA5003D0945 /* DriverDetailViewModel.swift */; };
 		2E7010FB2B714011003D0945 /* DriverDetailInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7010FA2B714011003D0945 /* DriverDetailInfoModel.swift */; };
+		2E7010FD2B7160E6003D0945 /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7010FC2B7160E6003D0945 /* TeamDetailViewController.swift */; };
+		2E7011012B7188D9003D0945 /* TeamDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7011002B7188D9003D0945 /* TeamDetailViewModel.swift */; };
+		2E7011032B718956003D0945 /* TeamDetailInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7011022B718956003D0945 /* TeamDetailInfoModel.swift */; };
 		2E81BF5F2B670175007F41F2 /* DriverDetailedViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81BF5E2B670175007F41F2 /* DriverDetailedViewComponent.swift */; };
 		2E81BF622B684E8D007F41F2 /* TeamTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81BF612B684E8D007F41F2 /* TeamTableCellView.swift */; };
 		2E9E349C2B5F1DF1002006EC /* StandingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9E349B2B5F1DF1002006EC /* StandingModel.swift */; };
@@ -49,6 +52,9 @@
 		2E6C375A2B6C107D00645182 /* DetailInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoCardView.swift; sourceTree = "<group>"; };
 		2E7010F82B713EA5003D0945 /* DriverDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailViewModel.swift; sourceTree = "<group>"; };
 		2E7010FA2B714011003D0945 /* DriverDetailInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailInfoModel.swift; sourceTree = "<group>"; };
+		2E7010FC2B7160E6003D0945 /* TeamDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailViewController.swift; sourceTree = "<group>"; };
+		2E7011002B7188D9003D0945 /* TeamDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailViewModel.swift; sourceTree = "<group>"; };
+		2E7011022B718956003D0945 /* TeamDetailInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailInfoModel.swift; sourceTree = "<group>"; };
 		2E81BF5E2B670175007F41F2 /* DriverDetailedViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailedViewComponent.swift; sourceTree = "<group>"; };
 		2E81BF612B684E8D007F41F2 /* TeamTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableCellView.swift; sourceTree = "<group>"; };
 		2E9E349B2B5F1DF1002006EC /* StandingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingModel.swift; sourceTree = "<group>"; };
@@ -96,6 +102,7 @@
 			children = (
 				2EBB52412B5D96A9005616F3 /* StandingViewController.swift */,
 				2E6C37562B6BE70500645182 /* DriverDetailViewController.swift */,
+				2E7010FC2B7160E6003D0945 /* TeamDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -105,6 +112,7 @@
 			children = (
 				2E9E349E2B5F1F36002006EC /* StandingViewModel.swift */,
 				2E7010F82B713EA5003D0945 /* DriverDetailViewModel.swift */,
+				2E7011002B7188D9003D0945 /* TeamDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -250,6 +258,7 @@
 				2EBB524C2B5DAF6D005616F3 /* CircuitModel.swift */,
 				2EE0FCD52B6D9E120028B9BB /* CircuitDetailInfoModel.swift */,
 				2E7010FA2B714011003D0945 /* DriverDetailInfoModel.swift */,
+				2E7011022B718956003D0945 /* TeamDetailInfoModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -373,6 +382,7 @@
 				2EBB52492B5DAF41005616F3 /* RaceModel.swift in Sources */,
 				2EBB524D2B5DAF6D005616F3 /* CircuitModel.swift in Sources */,
 				2EBB523C2B5D967D005616F3 /* TabBarViewController.swift in Sources */,
+				2E7011012B7188D9003D0945 /* TeamDetailViewModel.swift in Sources */,
 				2EBB52302B5D93DD005616F3 /* NetworkService.swift in Sources */,
 				2EBB52402B5D96A1005616F3 /* RacingViewController.swift in Sources */,
 				2E9E349F2B5F1F36002006EC /* StandingViewModel.swift in Sources */,
@@ -385,9 +395,11 @@
 				2E7010F92B713EA5003D0945 /* DriverDetailViewModel.swift in Sources */,
 				2EBB52322B5D9402005616F3 /* ColorExtension.swift in Sources */,
 				2EE0FCD42B6D96720028B9BB /* CircuitDetailViewModel.swift in Sources */,
+				2E7010FD2B7160E6003D0945 /* TeamDetailViewController.swift in Sources */,
 				2EBB523E2B5D9698005616F3 /* HomeViewController.swift in Sources */,
 				2EE0FCD62B6D9E120028B9BB /* CircuitDetailInfoModel.swift in Sources */,
 				2E7010FB2B714011003D0945 /* DriverDetailInfoModel.swift in Sources */,
+				2E7011032B718956003D0945 /* TeamDetailInfoModel.swift in Sources */,
 				2E81BF5F2B670175007F41F2 /* DriverDetailedViewComponent.swift in Sources */,
 				2E9E34A32B60660A002006EC /* ConstructorColor.swift in Sources */,
 				2E6C37592B6BF16900645182 /* DetailInfoListView.swift in Sources */,
