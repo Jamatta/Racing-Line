@@ -29,7 +29,7 @@ final class CircuitViewModel {
     //MARK: - Methods
     private func getCircuitInfo() {
         let baseURL = "https://ergast.com/api/f1/circuits"
-        let prefixURL = ".json"
+        let prefixURL = ".json?limit=77"
         let url = baseURL + prefixURL
         
         guard let urlString = URL(string: url) else {
