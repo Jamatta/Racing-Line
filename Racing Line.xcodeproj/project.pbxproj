@@ -23,6 +23,8 @@
 		2E9E34A12B606005002006EC /* DriverTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9E34A02B606005002006EC /* DriverTableCellView.swift */; };
 		2E9E34A32B60660A002006EC /* ConstructorColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9E34A22B60660A002006EC /* ConstructorColor.swift */; };
 		2EA250492B729C5B001A39A2 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA250482B729C5B001A39A2 /* ArticleModel.swift */; };
+		2EA2504D2B729DE9001A39A2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA2504C2B729DE9001A39A2 /* HomeViewModel.swift */; };
+		2EA2504F2B72A850001A39A2 /* NewsViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA2504E2B72A850001A39A2 /* NewsViewComponent.swift */; };
 		2EBB52132B5D92D3005616F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB52122B5D92D3005616F3 /* AppDelegate.swift */; };
 		2EBB52152B5D92D3005616F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB52142B5D92D3005616F3 /* SceneDelegate.swift */; };
 		2EBB521C2B5D92D4005616F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EBB521B2B5D92D4005616F3 /* Assets.xcassets */; };
@@ -63,6 +65,8 @@
 		2E9E34A02B606005002006EC /* DriverTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverTableCellView.swift; sourceTree = "<group>"; };
 		2E9E34A22B60660A002006EC /* ConstructorColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructorColor.swift; sourceTree = "<group>"; };
 		2EA250482B729C5B001A39A2 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		2EA2504C2B729DE9001A39A2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		2EA2504E2B72A850001A39A2 /* NewsViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewComponent.swift; sourceTree = "<group>"; };
 		2EBB520F2B5D92D3005616F3 /* Racing Line.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Racing Line.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EBB52122B5D92D3005616F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EBB52142B5D92D3005616F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +119,22 @@
 				2E9E349E2B5F1F36002006EC /* StandingViewModel.swift */,
 				2E7010F82B713EA5003D0945 /* DriverDetailViewModel.swift */,
 				2E7011002B7188D9003D0945 /* TeamDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2EA2504A2B729DBC001A39A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2EBB523D2B5D9698005616F3 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2EA2504B2B729DC7001A39A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2EA2504C2B729DE9001A39A2 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -211,7 +231,8 @@
 		2EBB52362B5D956B005616F3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				2EBB523D2B5D9698005616F3 /* HomeViewController.swift */,
+				2EA2504A2B729DBC001A39A2 /* View */,
+				2EA2504B2B729DC7001A39A2 /* ViewModel */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -291,6 +312,7 @@
 				2E81BF612B684E8D007F41F2 /* TeamTableCellView.swift */,
 				2E6C37582B6BF16900645182 /* DetailInfoListView.swift */,
 				2E6C375A2B6C107D00645182 /* DetailInfoCardView.swift */,
+				2EA2504E2B72A850001A39A2 /* NewsViewComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -391,6 +413,7 @@
 				2E9E349F2B5F1F36002006EC /* StandingViewModel.swift in Sources */,
 				2E9E349C2B5F1DF1002006EC /* StandingModel.swift in Sources */,
 				2EBB52132B5D92D3005616F3 /* AppDelegate.swift in Sources */,
+				2EA2504D2B729DE9001A39A2 /* HomeViewModel.swift in Sources */,
 				2EA250492B729C5B001A39A2 /* ArticleModel.swift in Sources */,
 				2EBB52442B5D96B3005616F3 /* CircuitViewController.swift in Sources */,
 				2EBB52422B5D96A9005616F3 /* StandingViewController.swift in Sources */,
@@ -409,6 +432,7 @@
 				2E6C37592B6BF16900645182 /* DetailInfoListView.swift in Sources */,
 				2EBB524B2B5DAF5B005616F3 /* RaceTableModel.swift in Sources */,
 				2EBB52542B5DB1A1005616F3 /* RacingTableCellView.swift in Sources */,
+				2EA2504F2B72A850001A39A2 /* NewsViewComponent.swift in Sources */,
 				2EBB52342B5D943B005616F3 /* UIViewPin.swift in Sources */,
 				2E6C375B2B6C107D00645182 /* DetailInfoCardView.swift in Sources */,
 				2E6C37572B6BE70500645182 /* DriverDetailViewController.swift in Sources */,
