@@ -65,7 +65,10 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Handle cell selection if needed
+        let article = articles[indexPath.row]
+        let vc = UIHostingController(rootView: NewsDetailView(article: article))
+        
+        navigationController?.present(vc, animated: true)
     }
 }
 
