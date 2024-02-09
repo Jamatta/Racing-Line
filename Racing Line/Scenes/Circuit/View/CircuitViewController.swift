@@ -6,24 +6,77 @@
 //
 
 import UIKit
+import SwiftUI
 
-final class CircuitViewController: UIViewController {
+final class CircuitViewController: UIViewController, UITableViewDelegate {
+    
+    //MARK: - Properties
+    private var viewModel: CircuitViewModel = CircuitViewModel(networkManager: Network())
+    private var circuit = [Circuit]()
 
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        return tableView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(AppColors.background)
+        setupViewModelDelegate()
+        
+        view.addSubview(tableView)
+        tableView.pin(to: view)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "raceCell")
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.viewDidLoad()
     }
-    */
+    
+    private func setupViewModelDelegate() {
+        viewModel.delegate = self
+    }
+}
 
+extension CircuitViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return circuit.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let circuit = circuit[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "raceCell", for: indexPath)
+        
+        cell.contentConfiguration = UIHostingConfiguration(content: {
+            CircuitTableCellView(circuit: circuit)
+        })
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let circuitName = circuit[indexPath.row].circuitName
+        let vc = UIHostingController(rootView: CircuitDetailViewController(circuitName: circuitName))
+        navigationController?.present(vc, animated: true)
+    }
+}
+
+extension CircuitViewController: CircuitViewModelDelegate {
+    func circuitInfoGot(_ data: MRData) {
+        
+        guard let circuitData = data.circuitTable?.circuits else {
+            return
+        }
+        circuit = circuitData
+        tableView.reloadData()
+    }
+    
+    func showError(_ error: Error) {
+        print("error!")
+    }
 }
