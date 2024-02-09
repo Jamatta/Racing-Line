@@ -16,6 +16,7 @@
 		2E7010FD2B7160E6003D0945 /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7010FC2B7160E6003D0945 /* TeamDetailViewController.swift */; };
 		2E7011012B7188D9003D0945 /* TeamDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7011002B7188D9003D0945 /* TeamDetailViewModel.swift */; };
 		2E7011032B718956003D0945 /* TeamDetailInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7011022B718956003D0945 /* TeamDetailInfoModel.swift */; };
+		2E74C7CC2B76956D005ED9D9 /* CircuitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E74C7CB2B76956D005ED9D9 /* CircuitCardView.swift */; };
 		2E81BF5F2B670175007F41F2 /* DriverDetailedViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81BF5E2B670175007F41F2 /* DriverDetailedViewComponent.swift */; };
 		2E81BF622B684E8D007F41F2 /* TeamTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E81BF612B684E8D007F41F2 /* TeamTableCellView.swift */; };
 		2E9E349C2B5F1DF1002006EC /* StandingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9E349B2B5F1DF1002006EC /* StandingModel.swift */; };
@@ -60,6 +61,7 @@
 		2E7010FC2B7160E6003D0945 /* TeamDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailViewController.swift; sourceTree = "<group>"; };
 		2E7011002B7188D9003D0945 /* TeamDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailViewModel.swift; sourceTree = "<group>"; };
 		2E7011022B718956003D0945 /* TeamDetailInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailInfoModel.swift; sourceTree = "<group>"; };
+		2E74C7CB2B76956D005ED9D9 /* CircuitCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitCardView.swift; sourceTree = "<group>"; };
 		2E81BF5E2B670175007F41F2 /* DriverDetailedViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailedViewComponent.swift; sourceTree = "<group>"; };
 		2E81BF612B684E8D007F41F2 /* TeamTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableCellView.swift; sourceTree = "<group>"; };
 		2E9E349B2B5F1DF1002006EC /* StandingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingModel.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 				2E6C37582B6BF16900645182 /* DetailInfoListView.swift */,
 				2E6C375A2B6C107D00645182 /* DetailInfoCardView.swift */,
 				2EA2504E2B72A850001A39A2 /* NewsViewComponent.swift */,
+				2E74C7CB2B76956D005ED9D9 /* CircuitCardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				2EA250492B729C5B001A39A2 /* ArticleModel.swift in Sources */,
 				2EBB52442B5D96B3005616F3 /* CircuitViewController.swift in Sources */,
 				2EBB52422B5D96A9005616F3 /* StandingViewController.swift in Sources */,
+				2E74C7CC2B76956D005ED9D9 /* CircuitCardView.swift in Sources */,
 				2EBB522E2B5D93C1005616F3 /* NetworkError.swift in Sources */,
 				2E81BF622B684E8D007F41F2 /* TeamTableCellView.swift in Sources */,
 				2E7010F92B713EA5003D0945 /* DriverDetailViewModel.swift in Sources */,
