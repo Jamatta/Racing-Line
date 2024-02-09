@@ -121,7 +121,6 @@ extension StandingViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let driver = driverStandings[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         switch segmentedControl.selectedSegmentIndex {
