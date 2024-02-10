@@ -17,6 +17,9 @@ struct NewsViewComponent: View {
             imageView
             articleInfo
         }
+        .padding(12)
+        .background(AppColors.background)
+        .cornerRadius(6)
     }
     
     private var imageView: some View {
@@ -51,6 +54,7 @@ struct NewsViewComponent: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 120, height: 88)
                     .clipped()
+                    .cornerRadius(2)
                 
             }, placeholder: {
                 Image("defaultImage")
@@ -58,6 +62,7 @@ struct NewsViewComponent: View {
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 120, height: 100)
                     .clipped()
+                    .cornerRadius(2)
             })
     }
 }
