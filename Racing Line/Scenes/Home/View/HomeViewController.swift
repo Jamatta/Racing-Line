@@ -72,14 +72,14 @@ extension HomeViewController: UICollectionViewDataSource {
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let article = articles[indexPath.row]
-        // Handle selection here
+        let vc = UIHostingController(rootView: NewsDetailView(article: article))
+        navigationController?.present(vc, animated: true)
     }
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let cell = articles[indexPath.row]
         let width = collectionView.bounds.width - 40
         let height: CGFloat = 116
         
