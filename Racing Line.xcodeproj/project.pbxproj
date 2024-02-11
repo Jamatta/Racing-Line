@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2E2D92262B777AD200512DED /* CircuitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D92252B777AD200512DED /* CircuitViewModel.swift */; };
 		2E2D92282B777B0E00512DED /* CircuitTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D92272B777B0E00512DED /* CircuitTableCellView.swift */; };
+		2E2D92302B78E6DD00512DED /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D922F2B78E6DD00512DED /* NewsDetailView.swift */; };
 		2E6282A92B6C41A900194748 /* CircuitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6282A82B6C41A900194748 /* CircuitDetailViewController.swift */; };
 		2E6C37572B6BE70500645182 /* DriverDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6C37562B6BE70500645182 /* DriverDetailViewController.swift */; };
 		2E6C37592B6BF16900645182 /* DetailInfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6C37582B6BF16900645182 /* DetailInfoListView.swift */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		2E2D92252B777AD200512DED /* CircuitViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircuitViewModel.swift; sourceTree = "<group>"; };
 		2E2D92272B777B0E00512DED /* CircuitTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircuitTableCellView.swift; sourceTree = "<group>"; };
+		2E2D922F2B78E6DD00512DED /* NewsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
 		2E6282A82B6C41A900194748 /* CircuitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitDetailViewController.swift; sourceTree = "<group>"; };
 		2E6C37562B6BE70500645182 /* DriverDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailViewController.swift; sourceTree = "<group>"; };
 		2E6C37582B6BF16900645182 /* DetailInfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoListView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		2EA2504A2B729DBC001A39A2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2E2D922F2B78E6DD00512DED /* NewsDetailView.swift */,
 				2EBB523D2B5D9698005616F3 /* HomeViewController.swift */,
 			);
 			path = View;
@@ -422,6 +425,7 @@
 				2E9E349F2B5F1F36002006EC /* StandingViewModel.swift in Sources */,
 				2E9E349C2B5F1DF1002006EC /* StandingModel.swift in Sources */,
 				2EBB52132B5D92D3005616F3 /* AppDelegate.swift in Sources */,
+				2E2D92302B78E6DD00512DED /* NewsDetailView.swift in Sources */,
 				2EA2504D2B729DE9001A39A2 /* HomeViewModel.swift in Sources */,
 				2EA250492B729C5B001A39A2 /* ArticleModel.swift in Sources */,
 				2EBB52442B5D96B3005616F3 /* CircuitViewController.swift in Sources */,

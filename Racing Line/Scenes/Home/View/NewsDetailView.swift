@@ -15,6 +15,7 @@ struct NewsDetailView: View {
     //MARK: - Body
     var body: some View {
         articleContentView
+            .padding(.top, -20)
     }
     
     private var articleContentView: some View {
@@ -32,10 +33,6 @@ struct NewsDetailView: View {
     
     private var imageView: some View {
             presentImage()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 320)
-                .clipped()
-        
     }
     
     private var articleTextView: some View {
@@ -91,6 +88,9 @@ struct NewsDetailView: View {
             content: { fetchedImage in
                 fetchedImage
                     .resizable()
+                    .frame(width: UIScreen.main.bounds.width, height: 320)
+                    .aspectRatio(contentMode: .fit)
+                    .clipped()
             },
             placeholder: {
                 Image("defaultImage")
