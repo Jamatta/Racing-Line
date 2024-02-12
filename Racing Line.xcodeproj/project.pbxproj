@@ -10,6 +10,18 @@
 		2E2D92262B777AD200512DED /* CircuitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D92252B777AD200512DED /* CircuitViewModel.swift */; };
 		2E2D92282B777B0E00512DED /* CircuitTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D92272B777B0E00512DED /* CircuitTableCellView.swift */; };
 		2E2D92302B78E6DD00512DED /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D922F2B78E6DD00512DED /* NewsDetailView.swift */; };
+		2E2D92342B78EDEA00512DED /* SimulatingFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D92332B78EDEA00512DED /* SimulatingFilterView.swift */; };
+		2E2D92382B78F44000512DED /* SimulatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D92372B78F44000512DED /* SimulatingView.swift */; };
+		2E2D923B2B79531800512DED /* Silverstone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D923A2B79531800512DED /* Silverstone.swift */; };
+		2E2D923D2B79536700512DED /* AnyShapeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D923C2B79536700512DED /* AnyShapeConverter.swift */; };
+		2E2D923F2B7953BB00512DED /* DriverProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D923E2B7953BB00512DED /* DriverProgressView.swift */; };
+		2E2D92432B79745C00512DED /* SimulatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D92422B79745C00512DED /* SimulatingViewModel.swift */; };
+		2E2D92452B79888500512DED /* RaceResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D92442B79888500512DED /* RaceResultsModel.swift */; };
+		2E2D92472B7A6DB600512DED /* Suzuka.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D92462B7A6DB600512DED /* Suzuka.swift */; };
+		2E2D92492B7A6FF700512DED /* Monaco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D92482B7A6FF700512DED /* Monaco.swift */; };
+		2E2D924B2B7A730B00512DED /* Spa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D924A2B7A730B00512DED /* Spa.swift */; };
+		2E2D924D2B7A756700512DED /* RaceStatisticsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D924C2B7A756700512DED /* RaceStatisticsModel.swift */; };
+		2E2D924F2B7A795800512DED /* Monza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2D924E2B7A795800512DED /* Monza.swift */; };
 		2E6282A92B6C41A900194748 /* CircuitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6282A82B6C41A900194748 /* CircuitDetailViewController.swift */; };
 		2E6C37572B6BE70500645182 /* DriverDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6C37562B6BE70500645182 /* DriverDetailViewController.swift */; };
 		2E6C37592B6BF16900645182 /* DetailInfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6C37582B6BF16900645182 /* DetailInfoListView.swift */; };
@@ -56,6 +68,18 @@
 		2E2D92252B777AD200512DED /* CircuitViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircuitViewModel.swift; sourceTree = "<group>"; };
 		2E2D92272B777B0E00512DED /* CircuitTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircuitTableCellView.swift; sourceTree = "<group>"; };
 		2E2D922F2B78E6DD00512DED /* NewsDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
+		2E2D92332B78EDEA00512DED /* SimulatingFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatingFilterView.swift; sourceTree = "<group>"; };
+		2E2D92372B78F44000512DED /* SimulatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatingView.swift; sourceTree = "<group>"; };
+		2E2D923A2B79531800512DED /* Silverstone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Silverstone.swift; sourceTree = "<group>"; };
+		2E2D923C2B79536700512DED /* AnyShapeConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyShapeConverter.swift; sourceTree = "<group>"; };
+		2E2D923E2B7953BB00512DED /* DriverProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverProgressView.swift; sourceTree = "<group>"; };
+		2E2D92422B79745C00512DED /* SimulatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatingViewModel.swift; sourceTree = "<group>"; };
+		2E2D92442B79888500512DED /* RaceResultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResultsModel.swift; sourceTree = "<group>"; };
+		2E2D92462B7A6DB600512DED /* Suzuka.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suzuka.swift; sourceTree = "<group>"; };
+		2E2D92482B7A6FF700512DED /* Monaco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monaco.swift; sourceTree = "<group>"; };
+		2E2D924A2B7A730B00512DED /* Spa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spa.swift; sourceTree = "<group>"; };
+		2E2D924C2B7A756700512DED /* RaceStatisticsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceStatisticsModel.swift; sourceTree = "<group>"; };
+		2E2D924E2B7A795800512DED /* Monza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monza.swift; sourceTree = "<group>"; };
 		2E6282A82B6C41A900194748 /* CircuitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitDetailViewController.swift; sourceTree = "<group>"; };
 		2E6C37562B6BE70500645182 /* DriverDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailViewController.swift; sourceTree = "<group>"; };
 		2E6C37582B6BF16900645182 /* DetailInfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoListView.swift; sourceTree = "<group>"; };
@@ -111,6 +135,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E2D92312B78EDA300512DED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2EBB52452B5D96BF005616F3 /* VisualizeViewController.swift */,
+				2E2D92332B78EDEA00512DED /* SimulatingFilterView.swift */,
+				2E2D92372B78F44000512DED /* SimulatingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2E2D92322B78EDA900512DED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2E2D92422B79745C00512DED /* SimulatingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2E2D92392B7952D000512DED /* CircuitShapes */ = {
+			isa = PBXGroup;
+			children = (
+				2E2D923C2B79536700512DED /* AnyShapeConverter.swift */,
+				2E2D923A2B79531800512DED /* Silverstone.swift */,
+				2E2D92462B7A6DB600512DED /* Suzuka.swift */,
+				2E2D92482B7A6FF700512DED /* Monaco.swift */,
+				2E2D924A2B7A730B00512DED /* Spa.swift */,
+				2E2D924E2B7A795800512DED /* Monza.swift */,
+			);
+			path = CircuitShapes;
+			sourceTree = "<group>";
+		};
 		2E81BF602B683FB7007F41F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +246,7 @@
 		2EBB52272B5D9325005616F3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2E2D92392B7952D000512DED /* CircuitShapes */,
 				2EBB521B2B5D92D4005616F3 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -276,7 +332,8 @@
 		2EBB523A2B5D95AA005616F3 /* Visualize */ = {
 			isa = PBXGroup;
 			children = (
-				2EBB52452B5D96BF005616F3 /* VisualizeViewController.swift */,
+				2E2D92312B78EDA300512DED /* View */,
+				2E2D92322B78EDA900512DED /* ViewModel */,
 			);
 			path = Visualize;
 			sourceTree = "<group>";
@@ -292,6 +349,8 @@
 				2E7010FA2B714011003D0945 /* DriverDetailInfoModel.swift */,
 				2E7011022B718956003D0945 /* TeamDetailInfoModel.swift */,
 				2EA250482B729C5B001A39A2 /* ArticleModel.swift */,
+				2E2D92442B79888500512DED /* RaceResultsModel.swift */,
+				2E2D924C2B7A756700512DED /* RaceStatisticsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -324,6 +383,7 @@
 				2E2D92272B777B0E00512DED /* CircuitTableCellView.swift */,
 				2EA2504E2B72A850001A39A2 /* NewsViewComponent.swift */,
 				2E74C7CB2B76956D005ED9D9 /* CircuitCardView.swift */,
+				2E2D923E2B7953BB00512DED /* DriverProgressView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -415,32 +475,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E2D923B2B79531800512DED /* Silverstone.swift in Sources */,
 				2EBB52512B5DB0CA005616F3 /* RacingViewModel.swift in Sources */,
 				2EBB52492B5DAF41005616F3 /* RaceModel.swift in Sources */,
 				2EBB524D2B5DAF6D005616F3 /* CircuitModel.swift in Sources */,
 				2EBB523C2B5D967D005616F3 /* TabBarViewController.swift in Sources */,
+				2E2D924F2B7A795800512DED /* Monza.swift in Sources */,
 				2E7011012B7188D9003D0945 /* TeamDetailViewModel.swift in Sources */,
 				2EBB52302B5D93DD005616F3 /* NetworkService.swift in Sources */,
+				2E2D923D2B79536700512DED /* AnyShapeConverter.swift in Sources */,
 				2EBB52402B5D96A1005616F3 /* RacingViewController.swift in Sources */,
 				2E9E349F2B5F1F36002006EC /* StandingViewModel.swift in Sources */,
 				2E9E349C2B5F1DF1002006EC /* StandingModel.swift in Sources */,
 				2EBB52132B5D92D3005616F3 /* AppDelegate.swift in Sources */,
 				2E2D92302B78E6DD00512DED /* NewsDetailView.swift in Sources */,
+				2E2D92472B7A6DB600512DED /* Suzuka.swift in Sources */,
 				2EA2504D2B729DE9001A39A2 /* HomeViewModel.swift in Sources */,
 				2EA250492B729C5B001A39A2 /* ArticleModel.swift in Sources */,
 				2EBB52442B5D96B3005616F3 /* CircuitViewController.swift in Sources */,
 				2EBB52422B5D96A9005616F3 /* StandingViewController.swift in Sources */,
+				2E2D924B2B7A730B00512DED /* Spa.swift in Sources */,
+				2E2D92382B78F44000512DED /* SimulatingView.swift in Sources */,
 				2E74C7CC2B76956D005ED9D9 /* CircuitCardView.swift in Sources */,
 				2EBB522E2B5D93C1005616F3 /* NetworkError.swift in Sources */,
 				2E81BF622B684E8D007F41F2 /* TeamTableCellView.swift in Sources */,
 				2E7010F92B713EA5003D0945 /* DriverDetailViewModel.swift in Sources */,
 				2EBB52322B5D9402005616F3 /* ColorExtension.swift in Sources */,
 				2EE0FCD42B6D96720028B9BB /* CircuitDetailViewModel.swift in Sources */,
+				2E2D923F2B7953BB00512DED /* DriverProgressView.swift in Sources */,
 				2E7010FD2B7160E6003D0945 /* TeamDetailViewController.swift in Sources */,
 				2E2D92282B777B0E00512DED /* CircuitTableCellView.swift in Sources */,
+				2E2D92342B78EDEA00512DED /* SimulatingFilterView.swift in Sources */,
 				2EBB523E2B5D9698005616F3 /* HomeViewController.swift in Sources */,
 				2EE0FCD62B6D9E120028B9BB /* CircuitDetailInfoModel.swift in Sources */,
 				2E7010FB2B714011003D0945 /* DriverDetailInfoModel.swift in Sources */,
+				2E2D924D2B7A756700512DED /* RaceStatisticsModel.swift in Sources */,
 				2E7011032B718956003D0945 /* TeamDetailInfoModel.swift in Sources */,
 				2E81BF5F2B670175007F41F2 /* DriverDetailedViewComponent.swift in Sources */,
 				2E9E34A32B60660A002006EC /* ConstructorColor.swift in Sources */,
@@ -448,7 +517,10 @@
 				2EBB524B2B5DAF5B005616F3 /* RaceTableModel.swift in Sources */,
 				2EBB52542B5DB1A1005616F3 /* RacingTableCellView.swift in Sources */,
 				2EA2504F2B72A850001A39A2 /* NewsViewComponent.swift in Sources */,
+				2E2D92492B7A6FF700512DED /* Monaco.swift in Sources */,
 				2EBB52342B5D943B005616F3 /* UIViewPin.swift in Sources */,
+				2E2D92432B79745C00512DED /* SimulatingViewModel.swift in Sources */,
+				2E2D92452B79888500512DED /* RaceResultsModel.swift in Sources */,
 				2E2D92262B777AD200512DED /* CircuitViewModel.swift in Sources */,
 				2E6C375B2B6C107D00645182 /* DetailInfoCardView.swift in Sources */,
 				2E6C37572B6BE70500645182 /* DriverDetailViewController.swift in Sources */,

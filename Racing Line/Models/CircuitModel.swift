@@ -34,3 +34,16 @@ struct Circuit: Decodable {
 struct Location: Decodable {
     let lat, long, locality, country: String
 }
+
+// MARK: - CircuitData
+struct CircuitData {
+    let name: String
+    let location: String
+    let description: String
+    let imageName: String
+    let circuitShape: AnyShape
+}
+
+extension CircuitData: Identifiable {
+    public var id: String { name }
+}
