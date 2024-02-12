@@ -3,4 +3,85 @@
    uuid = "8C55E6CC-5057-4D40-A84B-5530BF98561E"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6B512330-68F4-410F-B260-AB2BFBDEBC5B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Racing Line/Scenes/Visualize/ViewModel/SimulatingViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "getRaceResults(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "07858E41-5BAF-4489-91BC-AD8339C0676D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Racing Line/Scenes/Visualize/ViewModel/SimulatingViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "getRaceResults(_:_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "07858E41-5BAF-4489-91BC-AD8339C0676D - 8863ff8f0974cdab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Racing_Line.SimulatingViewModel.getRaceResults(Swift.String, Swift.Int) -&gt; ()"
+                  moduleName = "Racing Line"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nijamatashvili/Desktop/Racing-Line/Racing%20Line/Scenes/Visualize/ViewModel/SimulatingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "1044">
+               </Location>
+               <Location
+                  uuid = "07858E41-5BAF-4489-91BC-AD8339C0676D - 6bc9286a61b7fa1d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Racing_Line.RaceResponse, Swift.Error&gt;) -&gt; () in Racing_Line.SimulatingViewModel.getRaceResults(Swift.String, Swift.Int) -&gt; ()"
+                  moduleName = "Racing Line"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nijamatashvili/Desktop/Racing-Line/Racing%20Line/Scenes/Visualize/ViewModel/SimulatingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "472">
+               </Location>
+               <Location
+                  uuid = "07858E41-5BAF-4489-91BC-AD8339C0676D - a930b293077dd716"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Racing_Line.RaceResponse, Swift.Error&gt;) -&gt; () in Racing_Line.SimulatingViewModel.getRaceResults(Swift.String, Swift.Int) -&gt; ()"
+                  moduleName = "Racing Line"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nijamatashvili/Desktop/Racing-Line/Racing%20Line/Scenes/Visualize/ViewModel/SimulatingViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

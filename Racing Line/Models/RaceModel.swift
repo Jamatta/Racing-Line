@@ -46,6 +46,7 @@ struct Race: Decodable {
     let thirdPractice: FirstPractice?
     let qualifying: FirstPractice
     let sprint: FirstPractice?
+    let results: [RaceResult]?
 
     enum CodingKeys: String, CodingKey {
         case season, round, url, raceName
@@ -56,6 +57,7 @@ struct Race: Decodable {
         case thirdPractice = "ThirdPractice"
         case qualifying = "Qualifying"
         case sprint = "Sprint"
+        case results = "Results"
     }
 }
 
