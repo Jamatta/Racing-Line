@@ -9,11 +9,13 @@ import SwiftUI
 
 struct SimulatingFilterView: View {
     
+    //MARK: - Properties
     @ObservedObject var viewModel = SimulatingViewModel()
     @State private var selectedYear: RacingYear = .year2023
     @State private var isSimulatingViewPresented = false
     var selectedCircuit: CircuitData
     
+    //MARK: - Body
     var body: some View {
         VStack {
             headerContentView
@@ -23,6 +25,7 @@ struct SimulatingFilterView: View {
         .background(AppColors.background)
     }
     
+    //MARK: - Components
     private var headerContentView: some View {
         VStack(alignment: .leading, spacing: 20) {
             imageView
@@ -67,18 +70,21 @@ struct SimulatingFilterView: View {
                 selectedYear = newValue
             }
         }
-        .background(AppColors.background)
+        .listStyle(.plain)
+        .listRowSeparator(.hidden)
+        .background(Color.clear)
         .padding(.horizontal, 20)
         .padding(.top, 16)
+        .cornerRadius(6)
+        
     }
     
     private var buttonView: some View {
         Button("Start simulation") {
             isSimulatingViewPresented = true
-            print("Selected - \(selectedCircuit.name)")
             viewModel.raceName = selectedCircuit.name
             viewModel.viewDidLoad(raceYear: String(selectedYear.rawValue))
-            
+
         }
         .frame(maxWidth: .infinity)
         .frame(height: 56)
@@ -92,6 +98,7 @@ struct SimulatingFilterView: View {
             ) {
                 isSimulatingViewPresented = false
             }
+            .environmentObject(viewModel)
         })
         .padding(.horizontal, 20)
     }

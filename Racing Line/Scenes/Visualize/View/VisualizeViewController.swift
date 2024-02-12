@@ -10,18 +10,18 @@ import SwiftUI
 
 class VisualizeViewController: UIViewController {
     
-    // MARK: - Properties
+    //MARK: - Properties
     let visualizeView = VisualizeView()
     var hostingController: UIHostingController<VisualizeView>!
     
-    // MARK: - View Lifecycle
+    //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         setupHostingController()
     }
     
-    // MARK: - Setup Methods
+    //MARK: - Methods
     private func setupView() {
         navigationBarSetup()
     }
@@ -59,15 +59,16 @@ class VisualizeViewController: UIViewController {
 
 struct VisualizeView: View {
     
+    //MARK: - Properties
     @State private var selectedCircuit: CircuitData?
-    @State private var isModalPresented = false // State to control the presentation of the modal
+    @State private var isModalPresented = false
     
     let circuits = [
         CircuitData(name: "Spa",
                     location: "Stavelot, Belgium",
                     description: "Circuit de Spa-Francorchamps is renowned for its picturesque track layout, including iconic corners like Eau Rouge and Blanchimont.",
                     imageName: "spabg",
-                    circuitShape: AnyShape(MelbourneShape())
+                    circuitShape: AnyShape(Spa())
                    ),
         
         CircuitData(name: "Suzuka",
@@ -99,6 +100,7 @@ struct VisualizeView: View {
                    )
     ]
     
+    //MARK: - Body
     var body: some View {
         NavigationView {
             ScrollView {
@@ -129,14 +131,3 @@ struct VisualizeView: View {
     }
 }
 
-struct CircuitData {
-    let name: String
-    let location: String
-    let description: String
-    let imageName: String
-    let circuitShape: AnyShape
-}
-
-extension CircuitData: Identifiable {
-    public var id: String { name }
-}

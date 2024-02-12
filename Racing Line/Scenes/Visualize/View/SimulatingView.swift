@@ -9,16 +9,14 @@ import SwiftUI
 
 struct SimulatingView: View {
     
-    @ObservedObject var viewModel = SimulatingViewModel()
+    @EnvironmentObject var viewModel: SimulatingViewModel
     var circuitShape: AnyShape
     var selectedYear: Int
     
     var dismissAction: () -> Void
     
     let dotLength: CGFloat = 0.0001
-    let lapTimesD1: [Double] = [12.2, 11.8, 42.1]
-    let lapTimesD3: [Double] = [14.2, 43.2, 42.5]
-    let laps: Int = 3
+    var laps: Int = 1
     var endPosition: CGFloat {
         return 1
     }
@@ -43,51 +41,56 @@ struct SimulatingView: View {
             lapSectionView
             driverStandingListView
         }
-        .padding(12)
     }
     
     private var driverStandingListView: some View {
         VStack(alignment: .leading, spacing: 4) {
-            driverListView
-            driverListView
-            driverListView
-            driverListView
-            driverListView
+            ForEach(viewModel.raceResults.prefix(5))  { raceResult in
+                driverListView(
+                    driverName: raceResult.driver!.code,
+                    lapTimes: raceResult.fastestLap!.time,
+                    color: ConstructorColor.getColor(for: raceResult.constructor!.constructorID)
+                )
+            }
             Spacer()
         }
         .padding(.horizontal, 2)
     }
     
+    private func driverListView(driverName: String, lapTimes: String, color: Color) -> some View {
+        HStack(spacing: 4) {
+            Rectangle()
+                .frame(width: 2, height: 24)
+                .foregroundColor(color)
+            Text(driverName)
+                .foregroundStyle(AppColors.gray)
+                .font(Font.system(size: 11))
+                .bold()
+            Spacer()
+            Text(lapTimes)
+                .foregroundStyle(AppColors.gray)
+                .font(Font.system(size: 12))
+                .bold()
+        }
+        .padding(.horizontal, 8)
+        .padding(.vertical, 8)
+        .frame(maxWidth: .infinity)
+        .background(AppColors.layer.opacity(0.04))
+        .frame(maxWidth: 116)
+        
+    }
+    
     private var lapSectionView: some View {
         HStack {
-            Text("LAP ")
-            HStack(spacing: 0) {
-                Text("1")
-                    .bold()
-                Text("/\(laps)")
-            }
+            Text("Fastest Lap")
+            Spacer()
+            
         }
-        .padding(.horizontal, 12)
+        .padding(.horizontal, 8)
         .padding(.vertical, 12)
         .foregroundColor(AppColors.layer)
         .background(AppColors.layer.opacity(0.06))
-    }
-    
-    private var driverListView: some View {
-        HStack(spacing: 8) {
-            Rectangle()
-                .frame(width: 4, height: 28)
-                .foregroundColor(.blue)
-            Text("Ver")
-                .foregroundStyle(AppColors.gray)
-                .bold()
-            Spacer()
-        }
-        .padding(.horizontal, 12)
-        .padding(.vertical, 8)
-        .frame(maxWidth: 88)
-        .background(AppColors.layer.opacity(0.04))
-        
+        .frame(maxWidth: 116)
     }
     
     private var racingSimulatingView: some View {
@@ -97,23 +100,22 @@ struct SimulatingView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             
-            DriverProgressView(
-                lapTimes: lapTimesD1,
-                laps: laps,
-                color: Color(.blue),
-                circuitShape: AnyShape(circuitShape)
-            )
-            
-            DriverProgressView(
-                lapTimes: lapTimesD3,
-                laps: laps,
-                color: Color(.red),
-                circuitShape: AnyShape(circuitShape)
-            )
+            ForEach(Array(viewModel.raceResults.prefix(5).enumerated()), id: \.element.driver?.driverID) { index, raceResult in
+                if let lapTimeString = raceResult.fastestLap?.time {
+                    let fastestLapTimeInSeconds = viewModel.convertTimeToSeconds(timeString: lapTimeString)
+                    DriverProgressView(
+                        fastestLap: fastestLapTimeInSeconds,
+                        laps: laps,
+                        color: index.isMultiple(of: 2) ? Color(.blue) : Color(.red),
+                        circuitShape: AnyShape(circuitShape)
+                    )
+                }
+            }
         }
         .padding(.trailing, 200)
         .padding(.top, 56)
     }
+    
     
     private var closeButton: some View {
         Button(action: {

@@ -8,7 +8,8 @@
 import Foundation
 
 // MARK: - RaceResult
-struct RaceResult: Decodable {
+struct RaceResult: Decodable, Identifiable {
+    let id = UUID()
     let number, position, positionText, points: String?
     let driver: Driver?
     let constructor: Constructor?

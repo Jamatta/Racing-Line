@@ -15,7 +15,7 @@ struct DriverProgressView: View {
         return 1
     }
     
-    var lapTimes: [Double]
+    var fastestLap: Double
     var laps: Int
     var color: Color
     var circuitShape: AnyShape
@@ -35,12 +35,12 @@ struct DriverProgressView: View {
     
     private func animate() {
         if currentLap < laps {
-            let lapDuration = lapTimes[currentLap % lapTimes.count]
+            
             DispatchQueue.main.async {
-                withAnimation(.linear(duration: lapDuration)) {
+                withAnimation(.linear(duration: fastestLap)) {
                     Progress = endPosition
                 }
-                DispatchQueue.main.asyncAfter(deadline: .now() + lapDuration) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + fastestLap) {
                     Progress = 0
                     currentLap += 1
                     animate()
