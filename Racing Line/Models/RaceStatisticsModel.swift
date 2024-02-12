@@ -7,6 +7,7 @@
 
 import Foundation
 
+//MARK: - RaceStatisticsResponse
 struct RaceStatisticsResponse: Decodable {
     let mrData: RaceStatisticsMRData?
 
@@ -15,6 +16,7 @@ struct RaceStatisticsResponse: Decodable {
     }
 }
 
+//MARK: - RaceStatisticsMRData
 struct RaceStatisticsMRData: Decodable {
     let xmlns: String?
     let series: String?
@@ -28,6 +30,7 @@ struct RaceStatisticsMRData: Decodable {
     }
 }
 
+//MARK: - RaceTableMRData
 struct RaceTableMRData: Decodable {
     let season, round: String?
     let races: [RaceMRData]?
@@ -38,6 +41,7 @@ struct RaceTableMRData: Decodable {
     }
 }
 
+//MARK: - RaceMRData
 struct RaceMRData: Decodable {
     let season, round: String?
     let url: String?
@@ -54,6 +58,7 @@ struct RaceMRData: Decodable {
     }
 }
 
+//MARK: - CircuitMRData
 struct CircuitMRData: Decodable {
     let circuitID: String?
     let url: String?
@@ -67,10 +72,12 @@ struct CircuitMRData: Decodable {
     }
 }
 
+//MARK: - LocationMRData
 struct LocationMRData: Decodable {
     let lat, long, locality, country: String?
 }
 
+//MARK: - ResultMRData
 struct ResultMRData: Decodable {
     let number, position, positionText, points: String?
     let driver: DriverMRData?
@@ -90,6 +97,7 @@ struct ResultMRData: Decodable {
     }
 }
 
+//MARK: - ConstructorMRData
 struct ConstructorMRData: Decodable {
     let constructorID: String?
     let url: String?
@@ -101,6 +109,7 @@ struct ConstructorMRData: Decodable {
     }
 }
 
+//MARK: - DriverMRData
 struct DriverMRData: Decodable {
     let driverID, permanentNumber, code: String?
     let url: String?
@@ -112,6 +121,7 @@ struct DriverMRData: Decodable {
     }
 }
 
+//MARK: - FastestLapMRData
 struct FastestLapMRData: Decodable {
     let rank, lap: String?
     let time: FastestLapTimeMRData?
@@ -124,6 +134,7 @@ struct FastestLapMRData: Decodable {
     }
 }
 
+//MARK: - AverageSpeedMRData
 struct AverageSpeedMRData: Decodable {
     let units: Units?
     let speed: String?
@@ -133,10 +144,13 @@ enum Units: String, Decodable {
     case kph = "kph"
 }
 
+//MARK: - FastestLapTimeMRData
 struct FastestLapTimeMRData: Decodable {
     let time: String?
 }
 
+
+//MARK: - ResultTimeMRData
 struct ResultTimeMRData: Decodable {
     let millis, time: String?
 }

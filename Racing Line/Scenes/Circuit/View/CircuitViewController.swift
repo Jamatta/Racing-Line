@@ -13,7 +13,7 @@ final class CircuitViewController: UIViewController, UITableViewDelegate {
     //MARK: - Properties
     private var viewModel: CircuitViewModel = CircuitViewModel(networkManager: Network())
     private var circuit = [Circuit]()
-
+    
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.delegate = self
@@ -30,7 +30,7 @@ final class CircuitViewController: UIViewController, UITableViewDelegate {
         view.addSubview(tableView)
         tableView.pin(to: view)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "raceCell")
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,6 +43,7 @@ final class CircuitViewController: UIViewController, UITableViewDelegate {
     }
 }
 
+//MARK: - Extension
 extension CircuitViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return circuit.count
@@ -55,7 +56,6 @@ extension CircuitViewController: UITableViewDataSource {
         cell.contentConfiguration = UIHostingConfiguration(content: {
             CircuitTableCellView(circuit: circuit)
         })
-        
         return cell
     }
     

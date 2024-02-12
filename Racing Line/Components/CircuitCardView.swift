@@ -20,6 +20,7 @@ struct CircuitCardView: View {
         circuitCardContainerView
     }
     
+    //MARK: - Components
     private var circuitCardContainerView: some View {
         ZStack(alignment: .bottom) {
             backgroundImageView
@@ -121,8 +122,11 @@ struct CircuitCardView: View {
 }
 
 struct BottomCornerRadius: Shape {
+    
+    //MARK: - Properties
     let radius: CGFloat
 
+    //MARK: - Methods
     func path(in rect: CGRect) -> Path {
         var path = Path()
 
@@ -145,6 +149,7 @@ struct BottomCornerRadius: Shape {
         return path
     }
 }
+
 
 #Preview {
     CircuitCardView(

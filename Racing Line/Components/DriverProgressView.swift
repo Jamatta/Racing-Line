@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DriverProgressView: View {
+    
+    //MARK: - Properties
     @State private var Progress: CGFloat = 0.0
     @State private var currentLap: Int = 0
     let dotLength: CGFloat = 0.0001
@@ -20,6 +22,7 @@ struct DriverProgressView: View {
     var color: Color
     var circuitShape: AnyShape
     
+    //MARK: - Body
     var body: some View {
         ZStack {
             circuitShape
@@ -33,6 +36,7 @@ struct DriverProgressView: View {
         }
     }
     
+    //MARK: - Methods
     private func animate() {
         if currentLap < laps {
             

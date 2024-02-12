@@ -60,16 +60,10 @@ final class TeamDetailViewModel: ObservableObject {
     
     func convertToSnakeCase(name: String) -> String {
         var teamname = name.lowercased()
-
-        // Remove the word "Racing"
         teamname = teamname.replacingOccurrences(of: "racing", with: "")
-
-        // Remove trailing spaces
         teamname = teamname.trimmingCharacters(in: .whitespaces)
-
-        // Replace spaces with underscores
         teamname = teamname.replacingOccurrences(of: " ", with: "_")
-
+        
         return teamname
     }
 }

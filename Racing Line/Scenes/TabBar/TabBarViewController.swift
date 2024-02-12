@@ -9,6 +9,7 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
     
+    //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +30,7 @@ class TabBarViewController: UITabBarController {
         customizeTabBarAppearance()
     }
     
+    //MARK: - Methods
     private func createNavigationController(for viewController: UIViewController, title: String, imageName: String) -> UINavigationController {
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.tabBarItem.title = title

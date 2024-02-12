@@ -52,7 +52,6 @@ struct CircuitTableCellView: View {
     
     private var cellContainerView: some View {
         HStack(spacing: 20) {
-           // dateInfoView
             contentView
         }
         .padding(.horizontal, 12)

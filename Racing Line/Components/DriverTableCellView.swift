@@ -12,7 +12,7 @@ struct DriverTableCellView: View {
     //MARK: - Properties
     var driverStanding: DriverStanding
     
-    //MARK: - ody
+    //MARK: - Body
     var body: some View {
         HStack(spacing: 10) {
             
@@ -22,7 +22,6 @@ struct DriverTableCellView: View {
                 .frame(width: 48, height: 48)
                 .background(ConstructorColor.getColor(for: driverStanding.constructors.first!.constructorID).opacity(0.12))
                 .cornerRadius(24)
-                
             
             HStack {
                 VStack(alignment: .leading, spacing: 2) {

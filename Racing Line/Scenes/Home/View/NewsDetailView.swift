@@ -18,6 +18,7 @@ struct NewsDetailView: View {
             .padding(.top, -20)
     }
     
+    //MARK: - Components
     private var articleContentView: some View {
         ZStack {
             VStack(alignment: .leading, spacing: 24) {
@@ -32,7 +33,7 @@ struct NewsDetailView: View {
     }
     
     private var imageView: some View {
-            presentImage()
+        presentImage()
     }
     
     private var articleTextView: some View {

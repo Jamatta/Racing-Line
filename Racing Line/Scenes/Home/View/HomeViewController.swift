@@ -35,6 +35,7 @@ class HomeViewController: UIViewController {
         viewModel.viewDidLoad()
     }
     
+    //MARK: - Methods
     private func setupViews() {
         view.backgroundColor = UIColor(AppColors.background)
         view.addSubview(collectionView)
@@ -52,6 +53,7 @@ class HomeViewController: UIViewController {
     }
 }
 
+//MARK: - Extension
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return articles.count
