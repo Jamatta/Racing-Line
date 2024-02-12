@@ -9,10 +9,11 @@ import SwiftUI
 
 struct NewsViewComponent: View {
     
+    //MARK: - Properties
     let article: Article
     
+    //MARK: - Body
     var body: some View {
-        
         HStack(spacing: 12) {
             imageView
             articleInfo
@@ -22,6 +23,7 @@ struct NewsViewComponent: View {
         .cornerRadius(6)
     }
     
+    //MARK: - Components
     private var imageView: some View {
         presentImage()
     }

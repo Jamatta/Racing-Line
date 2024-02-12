@@ -91,6 +91,7 @@ final class StandingViewController: UIViewController, UITableViewDelegate {
     }
 }
 
+//MARK: - Extension
 extension StandingViewController: StandingViewModelDelegate {
     func standingInfoGot<T>(_ data: T) {
         if let drivers = data as? [DriverStanding] {

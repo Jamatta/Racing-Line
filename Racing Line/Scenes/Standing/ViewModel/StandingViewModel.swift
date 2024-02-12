@@ -22,10 +22,6 @@ final class StandingViewModel {
         self.networkManager = networkManager
     }
     
-//    func viewDidLoad() {
-//        loadDriversData()
-//    }
-    
     //MARK: - Methods
     func loadDriversData() {
         let baseURL = "https://ergast.com/api/f1/current/driverStandings"

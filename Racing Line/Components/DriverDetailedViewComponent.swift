@@ -63,7 +63,7 @@ struct DriverDetailedViewComponent: View {
     private var rectangeView: some View {
         Rectangle()
             .frame(width: 4, height: 88)
-            .foregroundColor(.blue) //ConstructorColor.getColor(for: )
+            .foregroundColor(ConstructorColor.getColor(for: driverTeam))
     }
     
     private var driverNameView: some View {

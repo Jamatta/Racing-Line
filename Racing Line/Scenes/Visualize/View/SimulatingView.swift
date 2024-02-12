@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SimulatingView: View {
     
+    //MARK: - Properties
     @EnvironmentObject var viewModel: SimulatingViewModel
     var circuitShape: AnyShape
     var selectedYear: Int
@@ -21,6 +22,7 @@ struct SimulatingView: View {
         return 1
     }
     
+    //MARK: - Body
     var body: some View {
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)
@@ -36,6 +38,7 @@ struct SimulatingView: View {
         }
     }
     
+    //MARK: - Methods
     private var leftSideOverlayView: some View {
         VStack(alignment: .leading, spacing: 4) {
             lapSectionView
@@ -71,6 +74,7 @@ struct SimulatingView: View {
                 .foregroundStyle(AppColors.gray)
                 .font(Font.system(size: 12))
                 .bold()
+            
         }
         .padding(.horizontal, 8)
         .padding(.vertical, 8)
@@ -115,7 +119,6 @@ struct SimulatingView: View {
         .padding(.trailing, 200)
         .padding(.top, 56)
     }
-    
     
     private var closeButton: some View {
         Button(action: {

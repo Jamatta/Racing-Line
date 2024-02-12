@@ -15,11 +15,10 @@ struct TeamTableCellView: View {
     //MARK: - Body
     var body: some View {
         HStack {
-
-                Text(teamStanding.constructor.name)
-                    .bold()
-                    .foregroundStyle(AppColors.textPrimary)
-
+            Text(teamStanding.constructor.name)
+                .bold()
+                .foregroundStyle(AppColors.textPrimary)
+            
             Spacer()
             
             ZStack {

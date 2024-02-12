@@ -10,6 +10,7 @@ import SwiftUI
 
 final class RacingViewController: UIViewController, UITableViewDelegate {
     
+    //MARK: - Properties
     private var viewModel: RacingViewModel = RacingViewModel(networkManager: Network())
     private var races = [Race]()
     
@@ -42,6 +43,7 @@ final class RacingViewController: UIViewController, UITableViewDelegate {
     }
 }
 
+//MARK: - Extensions
 extension RacingViewController: RacingViewModelDelegate {
     func racingInfoGot(_ data: MRData) {
         
@@ -69,7 +71,6 @@ extension RacingViewController: UITableViewDataSource {
         cell.contentConfiguration = UIHostingConfiguration(content: {
             RacingTableCellView(race: race)
         })
-        
         return cell
     }
     
