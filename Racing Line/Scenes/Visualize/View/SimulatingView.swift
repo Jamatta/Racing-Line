@@ -106,7 +106,7 @@ struct SimulatingView: View {
                     DriverProgressView(
                         fastestLap: fastestLapTimeInSeconds,
                         laps: laps,
-                        color: index.isMultiple(of: 2) ? Color(.blue) : Color(.red),
+                        color: ConstructorColor.getColor(for: raceResult.constructor!.constructorID),
                         circuitShape: AnyShape(circuitShape)
                     )
                 }
